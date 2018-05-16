@@ -1,0 +1,90 @@
+---
+title: "MongoDB Windows local"
+author: "Alexander Minyushkin"
+date: '2018.05.16'
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, cache = FALSE)
+usePackage <- function(p) {
+  if (!is.element(p, installed.packages()[,1]))
+    install.packages(p, dep = TRUE)
+  require(p, character.only = TRUE, quietly = TRUE)
+}
+
+usePackage("data.table") # for fast merging of access log & sar
+usePackage("ggplot2")
+
+Sys.setlocale("LC_TIME", "us")
+
+options(stringsAsFactors = FALSE)
+
+
+```
+
+
+```{r read_log}
+raw <- fread('grep Thread ..\\logs\\win_local_bench.log', 
+             sep=",", 
+             col.names=c("time", "response_time", "case", "thread", "label"))
+
+
+tidy <- data.table(raw, do.call(rbind, strsplit(raw$label,"-")))
+
+setnames(tidy, "V3", "thread_num")
+
+tidy$thread_num <- as.numeric(tidy$thread_num)
+
+tidy$time <- as.POSIXct(tidy$time, tz="", format="%Y-%m-%d %H:%M:%OS")
+```
+
+
+```{r response_time_during_test}
+
+  ggplot(data = tidy[case != "finished"][case != "started"], 
+         aes(x=time, 
+             y=response_time, 
+             group=thread_num, 
+             colour=case)) + 
+    geom_line() + ggtitle(paste0("Response times during test")) 
+```
+
+```{r response_time_vs_thread_num}
+
+  ggplot(data = tidy[case != "finished"][case != "started"][,list(response_time_90pct = quantile(response_time, 0.9)), by="case,thread_num"], 
+         aes(x=thread_num, 
+             y=response_time_90pct, 
+             group=case, 
+             colour=case)) + ylim(0,NA)+ scale_color_brewer(palette="Set1") +
+    geom_line() + geom_point() + ggtitle(paste0("Response times, percentile 90%")) 
+
+
+ ggplot(data = tidy[case != "finished"][case != "started"][,list(response_time_90pct = quantile(response_time, 0.9)), by="case,thread_num"], 
+         aes(x=thread_num, 
+             y=response_time_90pct, 
+             group=case, 
+             colour=case)) + ylim(0,NA)+ scale_color_brewer(palette="Set1") + facet_grid( . ~ case ) + 
+    geom_line() + geom_point()+ ggtitle(paste0("Response times, percentile 90%")) 
+
+
+ggsave("resp_time.png")
+
+```
+
+
+```{r response_time_vs_case}
+
+  ggplot(data = tidy[case != "finished"][case != "started"], 
+         aes(x=case, 
+             y=response_time, 
+             group=case, 
+             colour=case)) + facet_grid( . ~ thread_num ) + scale_y_log10() +
+    geom_boxplot() + ggtitle(paste0("Response times on different worklads")) 
+```
+
+
+
+
+
+
