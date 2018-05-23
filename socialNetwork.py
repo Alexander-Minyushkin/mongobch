@@ -105,6 +105,7 @@ class SN_OneCollection(SocialNetwork):
     def post_many_random(self, num):
 
         batch_size = 100
+        i = 0
         for i in range(batch_size, num, batch_size):    
             self.db.posts.insert_many([{
                 "content": randomText(),
