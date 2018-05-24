@@ -57,5 +57,6 @@ Initial posts added. 362.41374373435974
 
 ## Reports
 Once you get logs from benchmark you can generate nice reports using R. Take a look at folder `/report`
-Plot example
+
+Plot example, shows that response time depends on number of documents (posts_num) in collection
 ![Response time](/report/resp_time.png)

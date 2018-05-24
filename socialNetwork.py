@@ -7,6 +7,7 @@ from pymongo import MongoClient, DESCENDING
 import pprint
 
 from random import sample, choices, randint
+from math import sqrt, ceil
 import string
 import unittest
 
@@ -39,7 +40,7 @@ class SocialNetwork:
     def post(self, score, text):
         raise NotImplementedError
 
-    def post_many_random(self, num):
+    def generate_data(self, num):
         """
         To be used for generation of big data volumes
         """
@@ -102,23 +103,64 @@ class SN_OneCollection(SocialNetwork):
             "comments": [],
             })
 
-    def post_many_random(self, num):
+    def _inflate_to(self, M, max_string_len=len(randomText())):
+        """
+        Make full join of posts to posts and (not very) randomly combine content.
+        This will create more different 'words' for future experiments with indexes and text search.
+        """
 
-        batch_size = 100
-        i = 0
-        for i in range(batch_size, num, batch_size):    
-            self.db.posts.insert_many([{
-                "content": randomText(),
-                "score": randint(0,1000000),
-                "comments": [],
-                } for i in range(batch_size)]) ## .inserted_ids     TODO: use to update favorites_id instead of sort_favorites()
+        N = ceil(sqrt(M))
+            
+        limit = {"$limit": N}
         
-        if i < num:
-            self.db.posts.insert_many([{
-                "content": randomText(),
-                "score": randint(0,1000000),
-                "comments": [],
-                } for i in range(num - i)]) ## .inserted_ids     TODO: use to update favorites_id instead of sort_favorites()
+        lookup = {
+            "$lookup":{
+                "from": "posts",
+                "localField": "score",
+                "foreignField": "score",
+                "as": "joined"
+            }
+        }
+
+        unwinding = {
+            "$unwind":
+            {
+            "path": "$joined"
+            }
+
+        }
+        
+        split = randint(0, max_string_len-1)
+
+        project = {
+                '$project': {
+                    '_id':0,
+                    'score': 1,
+                    'comments': 1,
+                    'content': { '$concat': [ { '$substr': [ '$content', 0, split ] }, 
+                                            { '$substr': [ '$joined.content' , split,  max_string_len-split] }] 
+                            }
+                }
+        }
+        
+        self.db.posts.aggregate([limit, lookup, unwinding, project, {'$limit': M}, { '$out' : "posts" }])
+
+    def generate_data(self, num):
+        """
+        Used for initial data generation.
+        """
+        
+        self.db.posts.insert_many([{
+            "content": randomText(),
+            "score": 1, # this need to be constant for self._inflate_to() to work properly
+            "comments": [],
+            } for _ in range(min(100, num))]) ## Insert up to 100 initial posts
+
+        ## Inflate exponentially until required number of posts
+        while(self.db.command("collstats", "posts")['count'] < num):            
+            self._inflate_to(num)
+
+        self.sort_favorites()
 
             
 
@@ -152,41 +194,27 @@ class Test_SN_OneCollection(unittest.TestCase):
 
         sn.post()
 
-        pipeline = [
-            {
-                "$group": {
-                    "_id": "total",
-                    "count": { "$sum": 1 }       
-                }
-            }
-        ]
-        count_before = list(sn.db.posts.aggregate(pipeline))[0]['count']
+        count_before = sn.db.command("collstats", "posts")['count'] 
         sn.post()
-        count_after = list(sn.db.posts.aggregate(pipeline))[0]['count']
+        count_after = sn.db.command("collstats", "posts")['count'] 
 
         self.assertEqual( count_after - count_before, 1)
 
 
-    def test_post_many_random(self):
+    def test_generate_data(self):
         sn = SN_OneCollection(self.connection_string, "test")
+        
+        sn.db.posts.drop()
+        sn.generate_data(1111) # Important - number should not be equal to batch_size
+        count_after = sn.db.command("collstats", "posts")['count'] 
 
-        pipeline = [
-            {
-                "$group": {
-                    "_id": "total",
-                    "count": { "$sum": 1 }       
-                }
-            }
-        ]
-        count_before = list(sn.db.posts.aggregate(pipeline))[0]['count']
-        sn.post_many_random(1111) # Important - number should not be equal to batch_size
-        count_after = list(sn.db.posts.aggregate(pipeline))[0]['count']
-
-        self.assertEqual( count_after - count_before, 1111)
+        self.assertEqual( count_after, 1111)
 
 
     def test_read(self):
         sn = SN_OneCollection(self.connection_string, "test")
+
+        sn.post()
 
         self.assertTrue( len(sn.read()) > 0)
 

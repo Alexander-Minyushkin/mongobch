@@ -1,4 +1,4 @@
-
+#!/usr/bin/python3
 
 import click
 
@@ -35,7 +35,7 @@ def run_perf_test(threads, utt, connection, db_name, initial_post_num, ramp_up_s
     if initial_post_num > 0:
         click.echo(f"Adding initial posts ")
         start = time.time()
-        sn.post_many_random(initial_post_num)
+        sn.generate_data(initial_post_num)
         elapsed = time.time() - start 
 
         click.echo(f"Initial posts added, {elapsed}")
