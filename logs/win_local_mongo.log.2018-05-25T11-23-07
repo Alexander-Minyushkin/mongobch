@@ -1,0 +1,581 @@
+2018-05-24T17:58:59.729+0300 I CONTROL  [initandlisten] MongoDB starting : pid=14772 port=27017 dbpath=C:\Program Files\MongoDB\data\db 64-bit host=WSM-0870
+2018-05-24T17:58:59.730+0300 I CONTROL  [initandlisten] targetMinOS: Windows 7/Windows Server 2008 R2
+2018-05-24T17:58:59.730+0300 I CONTROL  [initandlisten] db version v3.6.4
+2018-05-24T17:58:59.730+0300 I CONTROL  [initandlisten] git version: d0181a711f7e7f39e60b5aeb1dc7097bf6ae5856
+2018-05-24T17:58:59.730+0300 I CONTROL  [initandlisten] OpenSSL version: OpenSSL 1.0.2o-fips  27 Mar 2018
+2018-05-24T17:58:59.730+0300 I CONTROL  [initandlisten] allocator: tcmalloc
+2018-05-24T17:58:59.730+0300 I CONTROL  [initandlisten] modules: enterprise 
+2018-05-24T17:58:59.731+0300 I CONTROL  [initandlisten] build environment:
+2018-05-24T17:58:59.731+0300 I CONTROL  [initandlisten]     distmod: windows-64
+2018-05-24T17:58:59.731+0300 I CONTROL  [initandlisten]     distarch: x86_64
+2018-05-24T17:58:59.731+0300 I CONTROL  [initandlisten]     target_arch: x86_64
+2018-05-24T17:58:59.731+0300 I CONTROL  [initandlisten] options: { cpu: true, storage: { dbPath: "C:\Program Files\MongoDB\data\db" }, systemLog: { destination: "file", path: "logs/win_local_mongo.log" } }
+2018-05-24T17:58:59.733+0300 I -        [initandlisten] Detected data files in C:\Program Files\MongoDB\data\db created by the 'wiredTiger' storage engine, so setting the active storage engine to 'wiredTiger'.
+2018-05-24T17:58:59.733+0300 I STORAGE  [initandlisten] wiredtiger_open config: create,cache_size=3533M,session_max=20000,eviction=(threads_min=4,threads_max=4),config_base=false,statistics=(fast),cache_cursors=false,log=(enabled=true,archive=true,path=journal,compressor=snappy),file_manager=(close_idle_time=100000),statistics_log=(wait=0),verbose=(recovery_progress),
+2018-05-24T17:59:00.213+0300 I STORAGE  [initandlisten] WiredTiger message [1527173940:213086][14772:140729921134928], txn-recover: Main recovery loop: starting at 112/3213056
+2018-05-24T17:59:00.434+0300 I STORAGE  [initandlisten] WiredTiger message [1527173940:433852][14772:140729921134928], txn-recover: Recovering log 112 through 113
+2018-05-24T17:59:00.558+0300 I STORAGE  [initandlisten] WiredTiger message [1527173940:557503][14772:140729921134928], txn-recover: Recovering log 113 through 113
+2018-05-24T17:59:01.099+0300 I STORAGE  [initandlisten] WiredTiger message [1527173941:99844][14772:140729921134928], txn-recover: Set global recovery timestamp: 0
+2018-05-24T17:59:02.057+0300 I CONTROL  [initandlisten] 
+2018-05-24T17:59:02.057+0300 I CONTROL  [initandlisten] ** WARNING: Access control is not enabled for the database.
+2018-05-24T17:59:02.057+0300 I CONTROL  [initandlisten] **          Read and write access to data and configuration is unrestricted.
+2018-05-24T17:59:02.057+0300 I CONTROL  [initandlisten] 
+2018-05-24T17:59:02.057+0300 I CONTROL  [initandlisten] ** WARNING: This server is bound to localhost.
+2018-05-24T17:59:02.057+0300 I CONTROL  [initandlisten] **          Remote systems will be unable to connect to this server. 
+2018-05-24T17:59:02.057+0300 I CONTROL  [initandlisten] **          Start the server with --bind_ip <address> to specify which IP 
+2018-05-24T17:59:02.058+0300 I CONTROL  [initandlisten] **          addresses it should serve responses from, or with --bind_ip_all to
+2018-05-24T17:59:02.058+0300 I CONTROL  [initandlisten] **          bind to all interfaces. If this behavior is desired, start the
+2018-05-24T17:59:02.058+0300 I CONTROL  [initandlisten] **          server with --bind_ip 127.0.0.1 to disable this warning.
+2018-05-24T17:59:02.058+0300 I CONTROL  [initandlisten] 
+2018-05-24T17:59:02.058+0300 I CONTROL  [initandlisten] 
+2018-05-24T17:59:02.058+0300 I CONTROL  [initandlisten] ** WARNING: The file system cache of this machine is configured to be greater than 40% of the total memory. This can lead to increased memory pressure and poor performance.
+2018-05-24T17:59:02.058+0300 I CONTROL  [initandlisten] See http://dochub.mongodb.org/core/wt-windows-system-file-cache
+2018-05-24T17:59:02.058+0300 I CONTROL  [initandlisten] 
+2018-05-24T17:59:06.971+0300 I FTDC     [initandlisten] Initializing full-time diagnostic data capture with directory 'C:/Program Files/MongoDB/data/db/diagnostic.data'
+2018-05-24T17:59:07.041+0300 I NETWORK  [initandlisten] waiting for connections on port 27017
+2018-05-24T17:59:07.241+0300 I NETWORK  [listener] connection accepted from 127.0.0.1:56972 #1 (1 connection now open)
+2018-05-24T17:59:07.245+0300 I NETWORK  [conn1] received client metadata from 127.0.0.1:56972 conn1: { driver: { name: "PyMongo", version: "3.6.0" }, os: { type: "Windows", name: "Windows 10", architecture: "AMD64", version: "10.0.16299-SP0" }, platform: "CPython 3.6.5.final.0" }
+2018-05-24T17:59:07.246+0300 I NETWORK  [listener] connection accepted from 127.0.0.1:56973 #2 (2 connections now open)
+2018-05-24T17:59:07.254+0300 I NETWORK  [conn2] received client metadata from 127.0.0.1:56973 conn2: { driver: { name: "PyMongo", version: "3.6.0" }, os: { type: "Windows", name: "Windows 10", architecture: "AMD64", version: "10.0.16299-SP0" }, platform: "CPython 3.6.5.final.0" }
+2018-05-24T17:59:07.256+0300 I STORAGE  [conn2] createCollection: test_perf.posts with generated UUID: e3a28345-0f2e-406d-b5c6-3fd03adc7aa2
+2018-05-24T17:59:07.782+0300 I COMMAND  [conn2] command test_perf.posts command: insert { insert: "posts", ordered: true, lsid: { id: UUID("d68c0931-8831-4f47-8024-6dccea91b870") }, $db: "test_perf" } ninserted:100 keysInserted:100 numYields:0 reslen:44 locks:{ Global: { acquireCount: { r: 6, w: 4 } }, Database: { acquireCount: { r: 1, w: 3, W: 1 } }, Collection: { acquireCount: { r: 1, w: 3 } } } protocol:op_query 526ms
+2018-05-24T17:59:07.787+0300 I STORAGE  [conn2] createCollection: test_perf.tmp.agg_out.1 with generated UUID: 8e19f0e9-a082-43b6-8e3d-8443bd94828d
+2018-05-24T17:59:08.036+0300 I COMMAND  [conn2] command test_perf.tmp.agg_out.1 command: create { create: "tmp.agg_out.1", temp: true, $db: "test_perf" } numYields:0 reslen:22 locks:{ Global: { acquireCount: { r: 11, w: 1 } }, Database: { acquireCount: { r: 4, R: 1, W: 1 } }, Collection: { acquireCount: { r: 3 } } } protocol:op_msg 248ms
+2018-05-24T17:59:08.286+0300 I COMMAND  [conn2] command test_perf.tmp.agg_out.1 command: insert { insert: "tmp.agg_out.1", ordered: true, $db: "test_perf" } ninserted:10000 keysInserted:10000 numYields:0 locks:{ Global: { acquireCount: { r: 579, w: 159 } }, Database: { acquireCount: { r: 209, w: 157, R: 1, W: 2 } }, Collection: { acquireCount: { r: 208, w: 157 } } } protocol:op_msg 143ms
+2018-05-24T17:59:08.289+0300 I COMMAND  [conn2] renameCollection: renaming collection no UUID from test_perf.tmp.agg_out.1 to test_perf.posts
+2018-05-24T17:59:08.289+0300 I STORAGE  [conn2] Finishing collection drop for test_perf.posts (e3a28345-0f2e-406d-b5c6-3fd03adc7aa2).
+2018-05-24T17:59:08.514+0300 I COMMAND  [conn2] command test_perf.tmp.agg_out.1 command: renameCollection { renameCollection: "test_perf.tmp.agg_out.1", to: "test_perf.posts", dropTarget: true, $db: "admin" } numYields:0 reslen:22 locks:{ Global: { acquireCount: { r: 585, w: 160, W: 1 } }, Database: { acquireCount: { r: 210, w: 157, R: 2, W: 3 } }, Collection: { acquireCount: { r: 209, w: 157 } } } protocol:op_msg 225ms
+2018-05-24T17:59:08.517+0300 I COMMAND  [conn2] command test_perf.posts command: aggregate { aggregate: "posts", pipeline: [ { $limit: 633 }, { $lookup: { from: "posts", localField: "score", foreignField: "score", as: "joined" } }, { $unwind: { path: "$joined" } }, { $project: { _id: 0, score: 1, comments: 1, content: { $concat: [ { $substr: [ "$content", 0, 474 ] }, { $substr: [ "$joined.content", 474, 550 ] } ] } } }, { $limit: 400000 }, { $out: "posts" } ], cursor: {}, lsid: { id: UUID("d68c0931-8831-4f47-8024-6dccea91b870") }, $readPreference: { mode: "secondaryPreferred" }, $db: "test_perf" } planSummary: COLLSCAN keysExamined:0 docsExamined:100 cursorExhausted:1 numYields:4 nreturned:0 reslen:103 locks:{ Global: { acquireCount: { r: 585, w: 160, W: 1 } }, Database: { acquireCount: { r: 210, w: 157, R: 2, W: 3 } }, Collection: { acquireCount: { r: 209, w: 157 } } } protocol:op_query 731ms
+2018-05-24T17:59:08.522+0300 I STORAGE  [conn2] createCollection: test_perf.tmp.agg_out.2 with generated UUID: 3fc4eb1b-6a8a-47dc-9ae5-a9d0381f62c3
+2018-05-24T17:59:09.023+0300 I COMMAND  [conn2] command test_perf.tmp.agg_out.2 command: create { create: "tmp.agg_out.2", temp: true, $db: "test_perf" } numYields:0 reslen:22 locks:{ Global: { acquireCount: { r: 11, w: 1 } }, Database: { acquireCount: { r: 4, R: 1, W: 1 } }, Collection: { acquireCount: { r: 3 } } } protocol:op_msg 501ms
+2018-05-24T17:59:09.358+0300 I COMMAND  [conn2] command test_perf.tmp.agg_out.2 command: insert { insert: "tmp.agg_out.2", ordered: true, $db: "test_perf" } ninserted:15694 keysInserted:15694 numYields:0 locks:{ Global: { acquireCount: { r: 542, w: 248 } }, Database: { acquireCount: { r: 146, w: 246, R: 1, W: 2 } }, Collection: { acquireCount: { r: 145, w: 246 } } } protocol:op_msg 175ms
+2018-05-24T17:59:10.007+0300 I COMMAND  [conn2] command test_perf.tmp.agg_out.2 command: insert { insert: "tmp.agg_out.2", ordered: true, $db: "test_perf" } ninserted:15694 keysInserted:15694 numYields:0 locks:{ Global: { acquireCount: { r: 1082, w: 494 } }, Database: { acquireCount: { r: 293, w: 492, R: 1, W: 2 } }, Collection: { acquireCount: { r: 292, w: 492 } } } protocol:op_msg 467ms
+2018-05-24T17:59:10.424+0300 I COMMAND  [conn2] command test_perf.tmp.agg_out.2 command: insert { insert: "tmp.agg_out.2", ordered: true, $db: "test_perf" } ninserted:15694 keysInserted:15694 numYields:0 locks:{ Global: { acquireCount: { r: 1600, w: 740 } }, Database: { acquireCount: { r: 429, w: 738, R: 1, W: 2 } }, Collection: { acquireCount: { r: 428, w: 738 } } } protocol:op_msg 206ms
+2018-05-24T17:59:10.871+0300 I COMMAND  [conn2] command test_perf.tmp.agg_out.2 command: insert { insert: "tmp.agg_out.2", ordered: true, $db: "test_perf" } ninserted:15694 keysInserted:15694 numYields:0 locks:{ Global: { acquireCount: { r: 2090, w: 986 } }, Database: { acquireCount: { r: 551, w: 984, R: 1, W: 2 } }, Collection: { acquireCount: { r: 550, w: 984 } } } protocol:op_msg 267ms
+2018-05-24T17:59:11.399+0300 I COMMAND  [conn2] command test_perf.tmp.agg_out.2 command: insert { insert: "tmp.agg_out.2", ordered: true, $db: "test_perf" } ninserted:15694 keysInserted:15694 numYields:0 locks:{ Global: { acquireCount: { r: 2608, w: 1232 } }, Database: { acquireCount: { r: 687, w: 1230, R: 1, W: 2 } }, Collection: { acquireCount: { r: 686, w: 1230 } } } protocol:op_msg 315ms
+2018-05-24T17:59:11.784+0300 I COMMAND  [conn2] command test_perf.tmp.agg_out.2 command: insert { insert: "tmp.agg_out.2", ordered: true, $db: "test_perf" } ninserted:15694 keysInserted:15694 numYields:0 locks:{ Global: { acquireCount: { r: 3146, w: 1478 } }, Database: { acquireCount: { r: 833, w: 1476, R: 1, W: 2 } }, Collection: { acquireCount: { r: 832, w: 1476 } } } protocol:op_msg 197ms
+2018-05-24T17:59:12.107+0300 I COMMAND  [conn2] command test_perf.tmp.agg_out.2 command: insert { insert: "tmp.agg_out.2", ordered: true, $db: "test_perf" } ninserted:15694 keysInserted:15694 numYields:0 locks:{ Global: { acquireCount: { r: 3636, w: 1724 } }, Database: { acquireCount: { r: 955, w: 1722, R: 1, W: 2 } }, Collection: { acquireCount: { r: 954, w: 1722 } } } protocol:op_msg 170ms
+2018-05-24T17:59:12.488+0300 I COMMAND  [conn2] command test_perf.tmp.agg_out.2 command: insert { insert: "tmp.agg_out.2", ordered: true, $db: "test_perf" } ninserted:15694 keysInserted:15694 numYields:0 locks:{ Global: { acquireCount: { r: 4154, w: 1970 } }, Database: { acquireCount: { r: 1091, w: 1968, R: 1, W: 2 } }, Collection: { acquireCount: { r: 1090, w: 1968 } } } protocol:op_msg 230ms
+2018-05-24T17:59:12.838+0300 I COMMAND  [conn2] command test_perf.tmp.agg_out.2 command: insert { insert: "tmp.agg_out.2", ordered: true, $db: "test_perf" } ninserted:15694 keysInserted:15694 numYields:0 locks:{ Global: { acquireCount: { r: 4694, w: 2216 } }, Database: { acquireCount: { r: 1238, w: 2214, R: 1, W: 2 } }, Collection: { acquireCount: { r: 1237, w: 2214 } } } protocol:op_msg 195ms
+2018-05-24T17:59:13.156+0300 I COMMAND  [conn2] command test_perf.tmp.agg_out.2 command: insert { insert: "tmp.agg_out.2", ordered: true, $db: "test_perf" } ninserted:15694 keysInserted:15694 numYields:0 locks:{ Global: { acquireCount: { r: 5212, w: 2462 } }, Database: { acquireCount: { r: 1374, w: 2460, R: 1, W: 2 } }, Collection: { acquireCount: { r: 1373, w: 2460 } } } protocol:op_msg 166ms
+2018-05-24T17:59:13.452+0300 I COMMAND  [conn2] command test_perf.tmp.agg_out.2 command: insert { insert: "tmp.agg_out.2", ordered: true, $db: "test_perf" } ninserted:15694 keysInserted:15694 numYields:0 locks:{ Global: { acquireCount: { r: 5700, w: 2708 } }, Database: { acquireCount: { r: 1495, w: 2706, R: 1, W: 2 } }, Collection: { acquireCount: { r: 1494, w: 2706 } } } protocol:op_msg 152ms
+2018-05-24T17:59:13.755+0300 I COMMAND  [conn2] command test_perf.tmp.agg_out.2 command: insert { insert: "tmp.agg_out.2", ordered: true, $db: "test_perf" } ninserted:15694 keysInserted:15694 numYields:0 locks:{ Global: { acquireCount: { r: 6218, w: 2954 } }, Database: { acquireCount: { r: 1631, w: 2952, R: 1, W: 2 } }, Collection: { acquireCount: { r: 1630, w: 2952 } } } protocol:op_msg 156ms
+2018-05-24T17:59:14.427+0300 I COMMAND  [conn2] command test_perf.tmp.agg_out.2 command: insert { insert: "tmp.agg_out.2", ordered: true, $db: "test_perf" } ninserted:15694 keysInserted:15694 numYields:0 locks:{ Global: { acquireCount: { r: 6758, w: 3200 } }, Database: { acquireCount: { r: 1778, w: 3198, R: 1, W: 2 } }, Collection: { acquireCount: { r: 1777, w: 3198 } } } protocol:op_msg 517ms
+2018-05-24T17:59:14.721+0300 I COMMAND  [conn2] command test_perf.tmp.agg_out.2 command: insert { insert: "tmp.agg_out.2", ordered: true, $db: "test_perf" } ninserted:15694 keysInserted:15694 numYields:0 locks:{ Global: { acquireCount: { r: 7248, w: 3446 } }, Database: { acquireCount: { r: 1900, w: 3444, R: 1, W: 2 } }, Collection: { acquireCount: { r: 1899, w: 3444 } } } protocol:op_msg 149ms
+2018-05-24T17:59:15.027+0300 I COMMAND  [conn2] command test_perf.tmp.agg_out.2 command: insert { insert: "tmp.agg_out.2", ordered: true, $db: "test_perf" } ninserted:15694 keysInserted:15694 numYields:0 locks:{ Global: { acquireCount: { r: 7764, w: 3692 } }, Database: { acquireCount: { r: 2035, w: 3690, R: 1, W: 2 } }, Collection: { acquireCount: { r: 2034, w: 3690 } } } protocol:op_msg 157ms
+2018-05-24T17:59:15.410+0300 I COMMAND  [conn2] command test_perf.tmp.agg_out.2 command: insert { insert: "tmp.agg_out.2", ordered: true, $db: "test_perf" } ninserted:15694 keysInserted:15694 numYields:0 locks:{ Global: { acquireCount: { r: 8304, w: 3938 } }, Database: { acquireCount: { r: 2182, w: 3936, R: 1, W: 2 } }, Collection: { acquireCount: { r: 2181, w: 3936 } } } protocol:op_msg 223ms
+2018-05-24T17:59:15.724+0300 I COMMAND  [conn2] command test_perf.tmp.agg_out.2 command: insert { insert: "tmp.agg_out.2", ordered: true, $db: "test_perf" } ninserted:15694 keysInserted:15694 numYields:0 locks:{ Global: { acquireCount: { r: 8822, w: 4184 } }, Database: { acquireCount: { r: 2318, w: 4182, R: 1, W: 2 } }, Collection: { acquireCount: { r: 2317, w: 4182 } } } protocol:op_msg 153ms
+2018-05-24T17:59:16.014+0300 I COMMAND  [conn2] command test_perf.tmp.agg_out.2 command: insert { insert: "tmp.agg_out.2", ordered: true, $db: "test_perf" } ninserted:15694 keysInserted:15694 numYields:0 locks:{ Global: { acquireCount: { r: 9312, w: 4430 } }, Database: { acquireCount: { r: 2440, w: 4428, R: 1, W: 2 } }, Collection: { acquireCount: { r: 2439, w: 4428 } } } protocol:op_msg 142ms
+2018-05-24T17:59:16.316+0300 I COMMAND  [conn2] command test_perf.tmp.agg_out.2 command: insert { insert: "tmp.agg_out.2", ordered: true, $db: "test_perf" } ninserted:15694 keysInserted:15694 numYields:0 locks:{ Global: { acquireCount: { r: 9828, w: 4676 } }, Database: { acquireCount: { r: 2575, w: 4674, R: 1, W: 2 } }, Collection: { acquireCount: { r: 2574, w: 4674 } } } protocol:op_msg 144ms
+2018-05-24T17:59:16.848+0300 I COMMAND  [conn2] command test_perf.tmp.agg_out.2 command: insert { insert: "tmp.agg_out.2", ordered: true, $db: "test_perf" } ninserted:15694 keysInserted:15694 numYields:0 locks:{ Global: { acquireCount: { r: 10368, w: 4922 } }, Database: { acquireCount: { r: 2722, w: 4920, R: 1, W: 2 } }, Collection: { acquireCount: { r: 2721, w: 4920 } } } protocol:op_msg 376ms
+2018-05-24T17:59:17.283+0300 I COMMAND  [conn2] command test_perf.tmp.agg_out.2 command: insert { insert: "tmp.agg_out.2", ordered: true, $db: "test_perf" } ninserted:15694 keysInserted:15694 numYields:0 locks:{ Global: { acquireCount: { r: 10858, w: 5168 } }, Database: { acquireCount: { r: 2844, w: 5166, R: 1, W: 2 } }, Collection: { acquireCount: { r: 2843, w: 5166 } } } protocol:op_msg 186ms
+2018-05-24T17:59:17.585+0300 I COMMAND  [conn2] command test_perf.tmp.agg_out.2 command: insert { insert: "tmp.agg_out.2", ordered: true, $db: "test_perf" } ninserted:15694 keysInserted:15694 numYields:0 locks:{ Global: { acquireCount: { r: 11376, w: 5414 } }, Database: { acquireCount: { r: 2980, w: 5412, R: 1, W: 2 } }, Collection: { acquireCount: { r: 2979, w: 5412 } } } protocol:op_msg 151ms
+2018-05-24T17:59:18.231+0300 I COMMAND  [conn2] command test_perf.tmp.agg_out.2 command: insert { insert: "tmp.agg_out.2", ordered: true, $db: "test_perf" } ninserted:15694 keysInserted:15694 numYields:0 locks:{ Global: { acquireCount: { r: 11914, w: 5660 } }, Database: { acquireCount: { r: 3126, w: 5658, R: 1, W: 2 } }, Collection: { acquireCount: { r: 3125, w: 5658 } } } protocol:op_msg 490ms
+2018-05-24T17:59:18.536+0300 I COMMAND  [conn2] command test_perf.tmp.agg_out.2 command: insert { insert: "tmp.agg_out.2", ordered: true, $db: "test_perf" } ninserted:15694 keysInserted:15694 numYields:0 locks:{ Global: { acquireCount: { r: 12432, w: 5906 } }, Database: { acquireCount: { r: 3262, w: 5904, R: 1, W: 2 } }, Collection: { acquireCount: { r: 3261, w: 5904 } } } protocol:op_msg 156ms
+2018-05-24T17:59:18.831+0300 I COMMAND  [conn2] command test_perf.tmp.agg_out.2 command: insert { insert: "tmp.agg_out.2", ordered: true, $db: "test_perf" } ninserted:15694 keysInserted:15694 numYields:0 locks:{ Global: { acquireCount: { r: 12920, w: 6152 } }, Database: { acquireCount: { r: 3383, w: 6150, R: 1, W: 2 } }, Collection: { acquireCount: { r: 3382, w: 6150 } } } protocol:op_msg 153ms
+2018-05-24T17:59:18.968+0300 I COMMAND  [conn2] renameCollection: renaming collection no UUID from test_perf.tmp.agg_out.2 to test_perf.posts
+2018-05-24T17:59:18.968+0300 I STORAGE  [conn2] Finishing collection drop for test_perf.posts (8e19f0e9-a082-43b6-8e3d-8443bd94828d).
+2018-05-24T17:59:19.125+0300 I COMMAND  [conn2] command test_perf.tmp.agg_out.2 command: renameCollection { renameCollection: "test_perf.tmp.agg_out.2", to: "test_perf.posts", dropTarget: true, $db: "admin" } numYields:0 reslen:22 locks:{ Global: { acquireCount: { r: 13168, w: 6273, W: 1 } }, Database: { acquireCount: { r: 3445, w: 6270, R: 2, W: 3 } }, Collection: { acquireCount: { r: 3444, w: 6270 } } } protocol:op_msg 157ms
+2018-05-24T17:59:19.128+0300 I COMMAND  [conn2] command test_perf.posts command: aggregate { aggregate: "posts", pipeline: [ { $limit: 633 }, { $lookup: { from: "posts", localField: "score", foreignField: "score", as: "joined" } }, { $unwind: { path: "$joined" } }, { $project: { _id: 0, score: 1, comments: 1, content: { $concat: [ { $substr: [ "$content", 0, 945 ] }, { $substr: [ "$joined.content", 945, 79 ] } ] } } }, { $limit: 400000 }, { $out: "posts" } ], cursor: {}, lsid: { id: UUID("d68c0931-8831-4f47-8024-6dccea91b870") }, $readPreference: { mode: "secondaryPreferred" }, $db: "test_perf" } planSummary: COLLSCAN keysExamined:0 docsExamined:633 cursorExhausted:1 numYields:3239 nreturned:0 reslen:103 locks:{ Global: { acquireCount: { r: 13168, w: 6273, W: 1 } }, Database: { acquireCount: { r: 3445, w: 6270, R: 2, W: 3 } }, Collection: { acquireCount: { r: 3444, w: 6270 } } } protocol:op_query 10606ms
+2018-05-24T17:59:19.237+0300 I COMMAND  [conn2] command test_perf.posts command: collStats { collstats: "posts", lsid: { id: UUID("d68c0931-8831-4f47-8024-6dccea91b870") }, $readPreference: { mode: "secondaryPreferred" }, $db: "test_perf" } numYields:0 reslen:13763 locks:{ Global: { acquireCount: { r: 2 } }, Database: { acquireCount: { r: 1 } }, Collection: { acquireCount: { r: 1 } } } protocol:op_query 107ms
+2018-05-24T17:59:20.304+0300 I COMMAND  [conn2] command test_perf.posts command: find { find: "posts", filter: {}, sort: { score: -1 }, projection: { _id: 1 }, limit: 1000, lsid: { id: UUID("d68c0931-8831-4f47-8024-6dccea91b870") }, $readPreference: { mode: "secondaryPreferred" }, $db: "test_perf" } planSummary: COLLSCAN cursorid:75415430415 keysExamined:0 docsExamined:400000 hasSortStage:1 numYields:3154 nreturned:101 reslen:2720 locks:{ Global: { acquireCount: { r: 6310 } }, Database: { acquireCount: { r: 3155 } }, Collection: { acquireCount: { r: 3155 } } } protocol:op_query 1065ms
+2018-05-24T17:59:21.372+0300 I COMMAND  [conn2] command test_perf.posts command: find { find: "posts", filter: {}, sort: { score: -1 }, projection: { _id: 1 }, limit: 1000, lsid: { id: UUID("d68c0931-8831-4f47-8024-6dccea91b870") }, $readPreference: { mode: "secondaryPreferred" }, $db: "test_perf" } planSummary: COLLSCAN cursorid:74238033012 keysExamined:0 docsExamined:400000 hasSortStage:1 numYields:3156 nreturned:101 reslen:2720 locks:{ Global: { acquireCount: { r: 6314 } }, Database: { acquireCount: { r: 3157 } }, Collection: { acquireCount: { r: 3157 } } } protocol:op_query 1061ms
+2018-05-24T17:59:21.381+0300 I NETWORK  [listener] connection accepted from 127.0.0.1:56974 #3 (3 connections now open)
+2018-05-24T17:59:21.385+0300 I NETWORK  [conn3] received client metadata from 127.0.0.1:56974 conn3: { driver: { name: "PyMongo", version: "3.6.0" }, os: { type: "Windows", name: "Windows 10", architecture: "AMD64", version: "10.0.16299-SP0" }, platform: "CPython 3.6.5.final.0" }
+2018-05-24T17:59:21.385+0300 I NETWORK  [listener] connection accepted from 127.0.0.1:56975 #4 (4 connections now open)
+2018-05-24T17:59:21.394+0300 I NETWORK  [conn4] received client metadata from 127.0.0.1:56975 conn4: { driver: { name: "PyMongo", version: "3.6.0" }, os: { type: "Windows", name: "Windows 10", architecture: "AMD64", version: "10.0.16299-SP0" }, platform: "CPython 3.6.5.final.0" }
+2018-05-24T17:59:21.394+0300 I NETWORK  [listener] connection accepted from 127.0.0.1:56976 #5 (5 connections now open)
+2018-05-24T17:59:21.405+0300 I NETWORK  [conn5] received client metadata from 127.0.0.1:56976 conn5: { driver: { name: "PyMongo", version: "3.6.0" }, os: { type: "Windows", name: "Windows 10", architecture: "AMD64", version: "10.0.16299-SP0" }, platform: "CPython 3.6.5.final.0" }
+2018-05-24T17:59:21.405+0300 I NETWORK  [listener] connection accepted from 127.0.0.1:56977 #6 (6 connections now open)
+2018-05-24T17:59:21.415+0300 I NETWORK  [conn6] received client metadata from 127.0.0.1:56977 conn6: { driver: { name: "PyMongo", version: "3.6.0" }, os: { type: "Windows", name: "Windows 10", architecture: "AMD64", version: "10.0.16299-SP0" }, platform: "CPython 3.6.5.final.0" }
+2018-05-24T17:59:21.416+0300 I NETWORK  [listener] connection accepted from 127.0.0.1:56978 #7 (7 connections now open)
+2018-05-24T17:59:21.426+0300 I NETWORK  [conn7] received client metadata from 127.0.0.1:56978 conn7: { driver: { name: "PyMongo", version: "3.6.0" }, os: { type: "Windows", name: "Windows 10", architecture: "AMD64", version: "10.0.16299-SP0" }, platform: "CPython 3.6.5.final.0" }
+2018-05-24T17:59:21.426+0300 I NETWORK  [listener] connection accepted from 127.0.0.1:56979 #8 (8 connections now open)
+2018-05-24T17:59:21.465+0300 I NETWORK  [conn8] received client metadata from 127.0.0.1:56979 conn8: { driver: { name: "PyMongo", version: "3.6.0" }, os: { type: "Windows", name: "Windows 10", architecture: "AMD64", version: "10.0.16299-SP0" }, platform: "CPython 3.6.5.final.0" }
+2018-05-24T17:59:21.465+0300 I NETWORK  [listener] connection accepted from 127.0.0.1:56980 #9 (9 connections now open)
+2018-05-24T17:59:21.468+0300 I NETWORK  [conn9] received client metadata from 127.0.0.1:56980 conn9: { driver: { name: "PyMongo", version: "3.6.0" }, os: { type: "Windows", name: "Windows 10", architecture: "AMD64", version: "10.0.16299-SP0" }, platform: "CPython 3.6.5.final.0" }
+2018-05-24T17:59:21.468+0300 I NETWORK  [listener] connection accepted from 127.0.0.1:56981 #10 (10 connections now open)
+2018-05-24T17:59:21.478+0300 I NETWORK  [conn10] received client metadata from 127.0.0.1:56981 conn10: { driver: { name: "PyMongo", version: "3.6.0" }, os: { type: "Windows", name: "Windows 10", architecture: "AMD64", version: "10.0.16299-SP0" }, platform: "CPython 3.6.5.final.0" }
+2018-05-24T17:59:21.478+0300 I NETWORK  [listener] connection accepted from 127.0.0.1:56982 #11 (11 connections now open)
+2018-05-24T17:59:21.489+0300 I NETWORK  [conn11] received client metadata from 127.0.0.1:56982 conn11: { driver: { name: "PyMongo", version: "3.6.0" }, os: { type: "Windows", name: "Windows 10", architecture: "AMD64", version: "10.0.16299-SP0" }, platform: "CPython 3.6.5.final.0" }
+2018-05-24T17:59:21.489+0300 I NETWORK  [listener] connection accepted from 127.0.0.1:56983 #12 (12 connections now open)
+2018-05-24T17:59:21.499+0300 I NETWORK  [conn12] received client metadata from 127.0.0.1:56983 conn12: { driver: { name: "PyMongo", version: "3.6.0" }, os: { type: "Windows", name: "Windows 10", architecture: "AMD64", version: "10.0.16299-SP0" }, platform: "CPython 3.6.5.final.0" }
+2018-05-24T17:59:23.628+0300 I NETWORK  [conn2] end connection 127.0.0.1:56973 (11 connections now open)
+2018-05-24T17:59:23.628+0300 I NETWORK  [conn11] end connection 127.0.0.1:56982 (10 connections now open)
+2018-05-24T17:59:23.629+0300 I NETWORK  [conn6] end connection 127.0.0.1:56977 (9 connections now open)
+2018-05-24T17:59:23.629+0300 I NETWORK  [conn10] end connection 127.0.0.1:56981 (8 connections now open)
+2018-05-24T17:59:23.629+0300 I NETWORK  [conn5] end connection 127.0.0.1:56976 (7 connections now open)
+2018-05-24T17:59:23.629+0300 I NETWORK  [conn9] end connection 127.0.0.1:56980 (6 connections now open)
+2018-05-24T17:59:23.629+0300 I NETWORK  [conn4] end connection 127.0.0.1:56975 (5 connections now open)
+2018-05-24T17:59:23.629+0300 I NETWORK  [conn8] end connection 127.0.0.1:56979 (4 connections now open)
+2018-05-24T17:59:23.630+0300 I NETWORK  [conn3] end connection 127.0.0.1:56974 (3 connections now open)
+2018-05-24T17:59:23.630+0300 I NETWORK  [conn7] end connection 127.0.0.1:56978 (1 connection now open)
+2018-05-24T17:59:23.630+0300 I NETWORK  [conn12] end connection 127.0.0.1:56983 (2 connections now open)
+2018-05-24T17:59:23.936+0300 I NETWORK  [conn1] end connection 127.0.0.1:56972 (0 connections now open)
+2018-05-24T17:59:24.269+0300 I NETWORK  [listener] connection accepted from 127.0.0.1:56984 #13 (1 connection now open)
+2018-05-24T17:59:24.282+0300 I NETWORK  [conn13] received client metadata from 127.0.0.1:56984 conn13: { driver: { name: "PyMongo", version: "3.6.0" }, os: { type: "Windows", name: "Windows 10", architecture: "AMD64", version: "10.0.16299-SP0" }, platform: "CPython 3.6.5.final.0" }
+2018-05-24T17:59:24.284+0300 I NETWORK  [listener] connection accepted from 127.0.0.1:56985 #14 (2 connections now open)
+2018-05-24T17:59:24.293+0300 I NETWORK  [conn14] received client metadata from 127.0.0.1:56985 conn14: { driver: { name: "PyMongo", version: "3.6.0" }, os: { type: "Windows", name: "Windows 10", architecture: "AMD64", version: "10.0.16299-SP0" }, platform: "CPython 3.6.5.final.0" }
+2018-05-24T17:59:25.360+0300 I COMMAND  [conn14] command test_perf.posts command: find { find: "posts", filter: {}, sort: { score: -1 }, projection: { _id: 1 }, limit: 1000, lsid: { id: UUID("67ebb594-0bc3-44d7-aba8-2d7344d4319c") }, $readPreference: { mode: "secondaryPreferred" }, $db: "test_perf" } planSummary: COLLSCAN cursorid:76347812175 keysExamined:0 docsExamined:400005 hasSortStage:1 numYields:3154 nreturned:101 reslen:2720 locks:{ Global: { acquireCount: { r: 6310 } }, Database: { acquireCount: { r: 3155 } }, Collection: { acquireCount: { r: 3155 } } } protocol:op_query 1066ms
+2018-05-24T17:59:25.367+0300 I NETWORK  [listener] connection accepted from 127.0.0.1:56986 #15 (3 connections now open)
+2018-05-24T17:59:25.372+0300 I NETWORK  [listener] connection accepted from 127.0.0.1:56987 #16 (4 connections now open)
+2018-05-24T17:59:25.372+0300 I NETWORK  [conn15] received client metadata from 127.0.0.1:56986 conn15: { driver: { name: "PyMongo", version: "3.6.0" }, os: { type: "Windows", name: "Windows 10", architecture: "AMD64", version: "10.0.16299-SP0" }, platform: "CPython 3.6.5.final.0" }
+2018-05-24T17:59:25.381+0300 I NETWORK  [conn16] received client metadata from 127.0.0.1:56987 conn16: { driver: { name: "PyMongo", version: "3.6.0" }, os: { type: "Windows", name: "Windows 10", architecture: "AMD64", version: "10.0.16299-SP0" }, platform: "CPython 3.6.5.final.0" }
+2018-05-24T17:59:25.381+0300 I NETWORK  [listener] connection accepted from 127.0.0.1:56988 #17 (5 connections now open)
+2018-05-24T17:59:25.392+0300 I NETWORK  [conn17] received client metadata from 127.0.0.1:56988 conn17: { driver: { name: "PyMongo", version: "3.6.0" }, os: { type: "Windows", name: "Windows 10", architecture: "AMD64", version: "10.0.16299-SP0" }, platform: "CPython 3.6.5.final.0" }
+2018-05-24T17:59:25.392+0300 I NETWORK  [listener] connection accepted from 127.0.0.1:56989 #18 (6 connections now open)
+2018-05-24T17:59:25.402+0300 I NETWORK  [conn18] received client metadata from 127.0.0.1:56989 conn18: { driver: { name: "PyMongo", version: "3.6.0" }, os: { type: "Windows", name: "Windows 10", architecture: "AMD64", version: "10.0.16299-SP0" }, platform: "CPython 3.6.5.final.0" }
+2018-05-24T17:59:25.403+0300 I NETWORK  [listener] connection accepted from 127.0.0.1:56990 #19 (7 connections now open)
+2018-05-24T17:59:25.413+0300 I NETWORK  [conn19] received client metadata from 127.0.0.1:56990 conn19: { driver: { name: "PyMongo", version: "3.6.0" }, os: { type: "Windows", name: "Windows 10", architecture: "AMD64", version: "10.0.16299-SP0" }, platform: "CPython 3.6.5.final.0" }
+2018-05-24T17:59:25.413+0300 I NETWORK  [listener] connection accepted from 127.0.0.1:56991 #20 (8 connections now open)
+2018-05-24T17:59:25.424+0300 I NETWORK  [conn20] received client metadata from 127.0.0.1:56991 conn20: { driver: { name: "PyMongo", version: "3.6.0" }, os: { type: "Windows", name: "Windows 10", architecture: "AMD64", version: "10.0.16299-SP0" }, platform: "CPython 3.6.5.final.0" }
+2018-05-24T17:59:25.424+0300 I NETWORK  [listener] connection accepted from 127.0.0.1:56992 #21 (9 connections now open)
+2018-05-24T17:59:25.434+0300 I NETWORK  [conn21] received client metadata from 127.0.0.1:56992 conn21: { driver: { name: "PyMongo", version: "3.6.0" }, os: { type: "Windows", name: "Windows 10", architecture: "AMD64", version: "10.0.16299-SP0" }, platform: "CPython 3.6.5.final.0" }
+2018-05-24T17:59:25.434+0300 I NETWORK  [listener] connection accepted from 127.0.0.1:56993 #22 (10 connections now open)
+2018-05-24T17:59:25.447+0300 I NETWORK  [conn22] received client metadata from 127.0.0.1:56993 conn22: { driver: { name: "PyMongo", version: "3.6.0" }, os: { type: "Windows", name: "Windows 10", architecture: "AMD64", version: "10.0.16299-SP0" }, platform: "CPython 3.6.5.final.0" }
+2018-05-24T17:59:25.447+0300 I NETWORK  [listener] connection accepted from 127.0.0.1:56994 #23 (11 connections now open)
+2018-05-24T17:59:25.456+0300 I NETWORK  [conn23] received client metadata from 127.0.0.1:56994 conn23: { driver: { name: "PyMongo", version: "3.6.0" }, os: { type: "Windows", name: "Windows 10", architecture: "AMD64", version: "10.0.16299-SP0" }, platform: "CPython 3.6.5.final.0" }
+2018-05-24T17:59:25.456+0300 I NETWORK  [listener] connection accepted from 127.0.0.1:56995 #24 (12 connections now open)
+2018-05-24T17:59:25.467+0300 I NETWORK  [conn24] received client metadata from 127.0.0.1:56995 conn24: { driver: { name: "PyMongo", version: "3.6.0" }, os: { type: "Windows", name: "Windows 10", architecture: "AMD64", version: "10.0.16299-SP0" }, platform: "CPython 3.6.5.final.0" }
+2018-05-24T17:59:25.467+0300 I NETWORK  [listener] connection accepted from 127.0.0.1:56996 #25 (13 connections now open)
+2018-05-24T17:59:25.478+0300 I NETWORK  [conn25] received client metadata from 127.0.0.1:56996 conn25: { driver: { name: "PyMongo", version: "3.6.0" }, os: { type: "Windows", name: "Windows 10", architecture: "AMD64", version: "10.0.16299-SP0" }, platform: "CPython 3.6.5.final.0" }
+2018-05-24T17:59:25.478+0300 I NETWORK  [listener] connection accepted from 127.0.0.1:56997 #26 (14 connections now open)
+2018-05-24T17:59:25.528+0300 I NETWORK  [conn26] received client metadata from 127.0.0.1:56997 conn26: { driver: { name: "PyMongo", version: "3.6.0" }, os: { type: "Windows", name: "Windows 10", architecture: "AMD64", version: "10.0.16299-SP0" }, platform: "CPython 3.6.5.final.0" }
+2018-05-24T17:59:25.528+0300 I NETWORK  [listener] connection accepted from 127.0.0.1:56998 #27 (15 connections now open)
+2018-05-24T17:59:25.532+0300 I NETWORK  [conn27] received client metadata from 127.0.0.1:56998 conn27: { driver: { name: "PyMongo", version: "3.6.0" }, os: { type: "Windows", name: "Windows 10", architecture: "AMD64", version: "10.0.16299-SP0" }, platform: "CPython 3.6.5.final.0" }
+2018-05-24T17:59:25.532+0300 I NETWORK  [listener] connection accepted from 127.0.0.1:56999 #28 (16 connections now open)
+2018-05-24T17:59:25.541+0300 I NETWORK  [conn28] received client metadata from 127.0.0.1:56999 conn28: { driver: { name: "PyMongo", version: "3.6.0" }, os: { type: "Windows", name: "Windows 10", architecture: "AMD64", version: "10.0.16299-SP0" }, platform: "CPython 3.6.5.final.0" }
+2018-05-24T17:59:25.541+0300 I NETWORK  [listener] connection accepted from 127.0.0.1:57000 #29 (17 connections now open)
+2018-05-24T17:59:25.552+0300 I NETWORK  [conn29] received client metadata from 127.0.0.1:57000 conn29: { driver: { name: "PyMongo", version: "3.6.0" }, os: { type: "Windows", name: "Windows 10", architecture: "AMD64", version: "10.0.16299-SP0" }, platform: "CPython 3.6.5.final.0" }
+2018-05-24T17:59:25.552+0300 I NETWORK  [listener] connection accepted from 127.0.0.1:57001 #30 (18 connections now open)
+2018-05-24T17:59:25.563+0300 I NETWORK  [conn30] received client metadata from 127.0.0.1:57001 conn30: { driver: { name: "PyMongo", version: "3.6.0" }, os: { type: "Windows", name: "Windows 10", architecture: "AMD64", version: "10.0.16299-SP0" }, platform: "CPython 3.6.5.final.0" }
+2018-05-24T17:59:25.563+0300 I NETWORK  [listener] connection accepted from 127.0.0.1:57002 #31 (19 connections now open)
+2018-05-24T17:59:25.573+0300 I NETWORK  [conn31] received client metadata from 127.0.0.1:57002 conn31: { driver: { name: "PyMongo", version: "3.6.0" }, os: { type: "Windows", name: "Windows 10", architecture: "AMD64", version: "10.0.16299-SP0" }, platform: "CPython 3.6.5.final.0" }
+2018-05-24T17:59:25.573+0300 I NETWORK  [listener] connection accepted from 127.0.0.1:57003 #32 (20 connections now open)
+2018-05-24T17:59:25.584+0300 I NETWORK  [conn32] received client metadata from 127.0.0.1:57003 conn32: { driver: { name: "PyMongo", version: "3.6.0" }, os: { type: "Windows", name: "Windows 10", architecture: "AMD64", version: "10.0.16299-SP0" }, platform: "CPython 3.6.5.final.0" }
+2018-05-24T17:59:25.584+0300 I NETWORK  [listener] connection accepted from 127.0.0.1:57004 #33 (21 connections now open)
+2018-05-24T17:59:25.595+0300 I NETWORK  [conn33] received client metadata from 127.0.0.1:57004 conn33: { driver: { name: "PyMongo", version: "3.6.0" }, os: { type: "Windows", name: "Windows 10", architecture: "AMD64", version: "10.0.16299-SP0" }, platform: "CPython 3.6.5.final.0" }
+2018-05-24T17:59:25.595+0300 I NETWORK  [listener] connection accepted from 127.0.0.1:57005 #34 (22 connections now open)
+2018-05-24T17:59:25.606+0300 I NETWORK  [conn34] received client metadata from 127.0.0.1:57005 conn34: { driver: { name: "PyMongo", version: "3.6.0" }, os: { type: "Windows", name: "Windows 10", architecture: "AMD64", version: "10.0.16299-SP0" }, platform: "CPython 3.6.5.final.0" }
+2018-05-24T17:59:28.058+0300 I NETWORK  [conn13] end connection 127.0.0.1:56984 (21 connections now open)
+2018-05-24T17:59:28.058+0300 I NETWORK  [conn33] end connection 127.0.0.1:57004 (20 connections now open)
+2018-05-24T17:59:28.059+0300 I NETWORK  [conn25] end connection 127.0.0.1:56996 (19 connections now open)
+2018-05-24T17:59:28.059+0300 I NETWORK  [conn32] end connection 127.0.0.1:57003 (18 connections now open)
+2018-05-24T17:59:28.059+0300 I NETWORK  [conn24] end connection 127.0.0.1:56995 (17 connections now open)
+2018-05-24T17:59:28.059+0300 I NETWORK  [conn31] end connection 127.0.0.1:57002 (16 connections now open)
+2018-05-24T17:59:28.059+0300 I NETWORK  [conn22] end connection 127.0.0.1:56993 (15 connections now open)
+2018-05-24T17:59:28.060+0300 I NETWORK  [conn30] end connection 127.0.0.1:57001 (14 connections now open)
+2018-05-24T17:59:28.060+0300 I NETWORK  [conn21] end connection 127.0.0.1:56992 (13 connections now open)
+2018-05-24T17:59:28.060+0300 I NETWORK  [conn29] end connection 127.0.0.1:57000 (12 connections now open)
+2018-05-24T17:59:28.060+0300 I NETWORK  [conn27] end connection 127.0.0.1:56998 (8 connections now open)
+2018-05-24T17:59:28.060+0300 I NETWORK  [conn19] end connection 127.0.0.1:56990 (4 connections now open)
+2018-05-24T17:59:28.060+0300 I NETWORK  [conn20] end connection 127.0.0.1:56991 (11 connections now open)
+2018-05-24T17:59:28.060+0300 I NETWORK  [conn17] end connection 127.0.0.1:56988 (7 connections now open)
+2018-05-24T17:59:28.060+0300 I NETWORK  [conn23] end connection 127.0.0.1:56994 (6 connections now open)
+2018-05-24T17:59:28.060+0300 I NETWORK  [conn16] end connection 127.0.0.1:56987 (5 connections now open)
+2018-05-24T17:59:28.060+0300 I NETWORK  [conn15] end connection 127.0.0.1:56986 (3 connections now open)
+2018-05-24T17:59:28.060+0300 I NETWORK  [conn34] end connection 127.0.0.1:57005 (2 connections now open)
+2018-05-24T17:59:28.060+0300 I NETWORK  [conn26] end connection 127.0.0.1:56997 (1 connection now open)
+2018-05-24T17:59:28.060+0300 I NETWORK  [conn28] end connection 127.0.0.1:56999 (10 connections now open)
+2018-05-24T17:59:28.060+0300 I NETWORK  [conn18] end connection 127.0.0.1:56989 (9 connections now open)
+2018-05-24T17:59:28.060+0300 I NETWORK  [conn14] end connection 127.0.0.1:56985 (0 connections now open)
+2018-05-24T17:59:28.927+0300 I NETWORK  [listener] connection accepted from 127.0.0.1:57006 #35 (1 connection now open)
+2018-05-24T17:59:28.939+0300 I NETWORK  [conn35] received client metadata from 127.0.0.1:57006 conn35: { driver: { name: "PyMongo", version: "3.6.0" }, os: { type: "Windows", name: "Windows 10", architecture: "AMD64", version: "10.0.16299-SP0" }, platform: "CPython 3.6.5.final.0" }
+2018-05-24T17:59:28.941+0300 I NETWORK  [listener] connection accepted from 127.0.0.1:57007 #36 (2 connections now open)
+2018-05-24T17:59:28.950+0300 I NETWORK  [conn36] received client metadata from 127.0.0.1:57007 conn36: { driver: { name: "PyMongo", version: "3.6.0" }, os: { type: "Windows", name: "Windows 10", architecture: "AMD64", version: "10.0.16299-SP0" }, platform: "CPython 3.6.5.final.0" }
+2018-05-24T17:59:30.037+0300 I COMMAND  [conn36] command test_perf.posts command: find { find: "posts", filter: {}, sort: { score: -1 }, projection: { _id: 1 }, limit: 1000, lsid: { id: UUID("39c481e2-0561-4090-a49d-9c7177b2b56a") }, $readPreference: { mode: "secondaryPreferred" }, $db: "test_perf" } planSummary: COLLSCAN cursorid:75349781026 keysExamined:0 docsExamined:400015 hasSortStage:1 numYields:3155 nreturned:101 reslen:2720 locks:{ Global: { acquireCount: { r: 6312 } }, Database: { acquireCount: { r: 3156 } }, Collection: { acquireCount: { r: 3156 } } } protocol:op_query 1086ms
+2018-05-24T17:59:30.046+0300 I NETWORK  [listener] connection accepted from 127.0.0.1:57008 #37 (3 connections now open)
+2018-05-24T17:59:30.051+0300 I NETWORK  [conn37] received client metadata from 127.0.0.1:57008 conn37: { driver: { name: "PyMongo", version: "3.6.0" }, os: { type: "Windows", name: "Windows 10", architecture: "AMD64", version: "10.0.16299-SP0" }, platform: "CPython 3.6.5.final.0" }
+2018-05-24T17:59:30.051+0300 I NETWORK  [listener] connection accepted from 127.0.0.1:57009 #38 (4 connections now open)
+2018-05-24T17:59:30.060+0300 I NETWORK  [listener] connection accepted from 127.0.0.1:57010 #39 (5 connections now open)
+2018-05-24T17:59:30.060+0300 I NETWORK  [conn38] received client metadata from 127.0.0.1:57009 conn38: { driver: { name: "PyMongo", version: "3.6.0" }, os: { type: "Windows", name: "Windows 10", architecture: "AMD64", version: "10.0.16299-SP0" }, platform: "CPython 3.6.5.final.0" }
+2018-05-24T17:59:30.071+0300 I NETWORK  [conn39] received client metadata from 127.0.0.1:57010 conn39: { driver: { name: "PyMongo", version: "3.6.0" }, os: { type: "Windows", name: "Windows 10", architecture: "AMD64", version: "10.0.16299-SP0" }, platform: "CPython 3.6.5.final.0" }
+2018-05-24T17:59:30.071+0300 I NETWORK  [listener] connection accepted from 127.0.0.1:57011 #40 (6 connections now open)
+2018-05-24T17:59:30.081+0300 I NETWORK  [conn40] received client metadata from 127.0.0.1:57011 conn40: { driver: { name: "PyMongo", version: "3.6.0" }, os: { type: "Windows", name: "Windows 10", architecture: "AMD64", version: "10.0.16299-SP0" }, platform: "CPython 3.6.5.final.0" }
+2018-05-24T17:59:30.081+0300 I NETWORK  [listener] connection accepted from 127.0.0.1:57012 #41 (7 connections now open)
+2018-05-24T17:59:30.092+0300 I NETWORK  [conn41] received client metadata from 127.0.0.1:57012 conn41: { driver: { name: "PyMongo", version: "3.6.0" }, os: { type: "Windows", name: "Windows 10", architecture: "AMD64", version: "10.0.16299-SP0" }, platform: "CPython 3.6.5.final.0" }
+2018-05-24T17:59:30.092+0300 I NETWORK  [listener] connection accepted from 127.0.0.1:57013 #42 (8 connections now open)
+2018-05-24T17:59:30.113+0300 I NETWORK  [conn42] received client metadata from 127.0.0.1:57013 conn42: { driver: { name: "PyMongo", version: "3.6.0" }, os: { type: "Windows", name: "Windows 10", architecture: "AMD64", version: "10.0.16299-SP0" }, platform: "CPython 3.6.5.final.0" }
+2018-05-24T17:59:30.113+0300 I NETWORK  [listener] connection accepted from 127.0.0.1:57014 #43 (9 connections now open)
+2018-05-24T17:59:30.117+0300 I NETWORK  [conn43] received client metadata from 127.0.0.1:57014 conn43: { driver: { name: "PyMongo", version: "3.6.0" }, os: { type: "Windows", name: "Windows 10", architecture: "AMD64", version: "10.0.16299-SP0" }, platform: "CPython 3.6.5.final.0" }
+2018-05-24T17:59:30.117+0300 I NETWORK  [listener] connection accepted from 127.0.0.1:57015 #44 (10 connections now open)
+2018-05-24T17:59:30.126+0300 I NETWORK  [conn44] received client metadata from 127.0.0.1:57015 conn44: { driver: { name: "PyMongo", version: "3.6.0" }, os: { type: "Windows", name: "Windows 10", architecture: "AMD64", version: "10.0.16299-SP0" }, platform: "CPython 3.6.5.final.0" }
+2018-05-24T17:59:30.126+0300 I NETWORK  [listener] connection accepted from 127.0.0.1:57016 #45 (11 connections now open)
+2018-05-24T17:59:30.136+0300 I NETWORK  [conn45] received client metadata from 127.0.0.1:57016 conn45: { driver: { name: "PyMongo", version: "3.6.0" }, os: { type: "Windows", name: "Windows 10", architecture: "AMD64", version: "10.0.16299-SP0" }, platform: "CPython 3.6.5.final.0" }
+2018-05-24T17:59:30.136+0300 I NETWORK  [listener] connection accepted from 127.0.0.1:57017 #46 (12 connections now open)
+2018-05-24T17:59:30.147+0300 I NETWORK  [conn46] received client metadata from 127.0.0.1:57017 conn46: { driver: { name: "PyMongo", version: "3.6.0" }, os: { type: "Windows", name: "Windows 10", architecture: "AMD64", version: "10.0.16299-SP0" }, platform: "CPython 3.6.5.final.0" }
+2018-05-24T17:59:30.147+0300 I NETWORK  [listener] connection accepted from 127.0.0.1:57018 #47 (13 connections now open)
+2018-05-24T17:59:30.157+0300 I NETWORK  [conn47] received client metadata from 127.0.0.1:57018 conn47: { driver: { name: "PyMongo", version: "3.6.0" }, os: { type: "Windows", name: "Windows 10", architecture: "AMD64", version: "10.0.16299-SP0" }, platform: "CPython 3.6.5.final.0" }
+2018-05-24T17:59:30.158+0300 I NETWORK  [listener] connection accepted from 127.0.0.1:57019 #48 (14 connections now open)
+2018-05-24T17:59:30.168+0300 I NETWORK  [conn48] received client metadata from 127.0.0.1:57019 conn48: { driver: { name: "PyMongo", version: "3.6.0" }, os: { type: "Windows", name: "Windows 10", architecture: "AMD64", version: "10.0.16299-SP0" }, platform: "CPython 3.6.5.final.0" }
+2018-05-24T17:59:30.168+0300 I NETWORK  [listener] connection accepted from 127.0.0.1:57020 #49 (15 connections now open)
+2018-05-24T17:59:30.179+0300 I NETWORK  [conn49] received client metadata from 127.0.0.1:57020 conn49: { driver: { name: "PyMongo", version: "3.6.0" }, os: { type: "Windows", name: "Windows 10", architecture: "AMD64", version: "10.0.16299-SP0" }, platform: "CPython 3.6.5.final.0" }
+2018-05-24T17:59:30.179+0300 I NETWORK  [listener] connection accepted from 127.0.0.1:57021 #50 (16 connections now open)
+2018-05-24T17:59:30.229+0300 I NETWORK  [conn50] received client metadata from 127.0.0.1:57021 conn50: { driver: { name: "PyMongo", version: "3.6.0" }, os: { type: "Windows", name: "Windows 10", architecture: "AMD64", version: "10.0.16299-SP0" }, platform: "CPython 3.6.5.final.0" }
+2018-05-24T17:59:30.229+0300 I NETWORK  [listener] connection accepted from 127.0.0.1:57022 #51 (17 connections now open)
+2018-05-24T17:59:30.233+0300 I NETWORK  [conn51] received client metadata from 127.0.0.1:57022 conn51: { driver: { name: "PyMongo", version: "3.6.0" }, os: { type: "Windows", name: "Windows 10", architecture: "AMD64", version: "10.0.16299-SP0" }, platform: "CPython 3.6.5.final.0" }
+2018-05-24T17:59:30.233+0300 I NETWORK  [listener] connection accepted from 127.0.0.1:57023 #52 (18 connections now open)
+2018-05-24T17:59:30.242+0300 I NETWORK  [conn52] received client metadata from 127.0.0.1:57023 conn52: { driver: { name: "PyMongo", version: "3.6.0" }, os: { type: "Windows", name: "Windows 10", architecture: "AMD64", version: "10.0.16299-SP0" }, platform: "CPython 3.6.5.final.0" }
+2018-05-24T17:59:30.242+0300 I NETWORK  [listener] connection accepted from 127.0.0.1:57024 #53 (19 connections now open)
+2018-05-24T17:59:30.252+0300 I NETWORK  [conn53] received client metadata from 127.0.0.1:57024 conn53: { driver: { name: "PyMongo", version: "3.6.0" }, os: { type: "Windows", name: "Windows 10", architecture: "AMD64", version: "10.0.16299-SP0" }, platform: "CPython 3.6.5.final.0" }
+2018-05-24T17:59:30.253+0300 I NETWORK  [listener] connection accepted from 127.0.0.1:57025 #54 (20 connections now open)
+2018-05-24T17:59:30.263+0300 I NETWORK  [conn54] received client metadata from 127.0.0.1:57025 conn54: { driver: { name: "PyMongo", version: "3.6.0" }, os: { type: "Windows", name: "Windows 10", architecture: "AMD64", version: "10.0.16299-SP0" }, platform: "CPython 3.6.5.final.0" }
+2018-05-24T17:59:30.264+0300 I NETWORK  [listener] connection accepted from 127.0.0.1:57026 #55 (21 connections now open)
+2018-05-24T17:59:30.274+0300 I NETWORK  [conn55] received client metadata from 127.0.0.1:57026 conn55: { driver: { name: "PyMongo", version: "3.6.0" }, os: { type: "Windows", name: "Windows 10", architecture: "AMD64", version: "10.0.16299-SP0" }, platform: "CPython 3.6.5.final.0" }
+2018-05-24T17:59:30.274+0300 I NETWORK  [listener] connection accepted from 127.0.0.1:57027 #56 (22 connections now open)
+2018-05-24T17:59:30.285+0300 I NETWORK  [conn56] received client metadata from 127.0.0.1:57027 conn56: { driver: { name: "PyMongo", version: "3.6.0" }, os: { type: "Windows", name: "Windows 10", architecture: "AMD64", version: "10.0.16299-SP0" }, platform: "CPython 3.6.5.final.0" }
+2018-05-24T17:59:30.285+0300 I NETWORK  [listener] connection accepted from 127.0.0.1:57028 #57 (23 connections now open)
+2018-05-24T17:59:30.296+0300 I NETWORK  [conn57] received client metadata from 127.0.0.1:57028 conn57: { driver: { name: "PyMongo", version: "3.6.0" }, os: { type: "Windows", name: "Windows 10", architecture: "AMD64", version: "10.0.16299-SP0" }, platform: "CPython 3.6.5.final.0" }
+2018-05-24T17:59:30.296+0300 I NETWORK  [listener] connection accepted from 127.0.0.1:57029 #58 (24 connections now open)
+2018-05-24T17:59:30.329+0300 I NETWORK  [conn58] received client metadata from 127.0.0.1:57029 conn58: { driver: { name: "PyMongo", version: "3.6.0" }, os: { type: "Windows", name: "Windows 10", architecture: "AMD64", version: "10.0.16299-SP0" }, platform: "CPython 3.6.5.final.0" }
+2018-05-24T17:59:30.329+0300 I NETWORK  [listener] connection accepted from 127.0.0.1:57030 #59 (25 connections now open)
+2018-05-24T17:59:30.333+0300 I NETWORK  [conn59] received client metadata from 127.0.0.1:57030 conn59: { driver: { name: "PyMongo", version: "3.6.0" }, os: { type: "Windows", name: "Windows 10", architecture: "AMD64", version: "10.0.16299-SP0" }, platform: "CPython 3.6.5.final.0" }
+2018-05-24T17:59:30.333+0300 I NETWORK  [listener] connection accepted from 127.0.0.1:57031 #60 (26 connections now open)
+2018-05-24T17:59:30.342+0300 I NETWORK  [conn60] received client metadata from 127.0.0.1:57031 conn60: { driver: { name: "PyMongo", version: "3.6.0" }, os: { type: "Windows", name: "Windows 10", architecture: "AMD64", version: "10.0.16299-SP0" }, platform: "CPython 3.6.5.final.0" }
+2018-05-24T17:59:30.343+0300 I NETWORK  [listener] connection accepted from 127.0.0.1:57032 #61 (27 connections now open)
+2018-05-24T17:59:30.353+0300 I NETWORK  [conn61] received client metadata from 127.0.0.1:57032 conn61: { driver: { name: "PyMongo", version: "3.6.0" }, os: { type: "Windows", name: "Windows 10", architecture: "AMD64", version: "10.0.16299-SP0" }, platform: "CPython 3.6.5.final.0" }
+2018-05-24T17:59:30.353+0300 I NETWORK  [listener] connection accepted from 127.0.0.1:57033 #62 (28 connections now open)
+2018-05-24T17:59:30.364+0300 I NETWORK  [conn62] received client metadata from 127.0.0.1:57033 conn62: { driver: { name: "PyMongo", version: "3.6.0" }, os: { type: "Windows", name: "Windows 10", architecture: "AMD64", version: "10.0.16299-SP0" }, platform: "CPython 3.6.5.final.0" }
+2018-05-24T17:59:30.364+0300 I NETWORK  [listener] connection accepted from 127.0.0.1:57034 #63 (29 connections now open)
+2018-05-24T17:59:30.375+0300 I NETWORK  [conn63] received client metadata from 127.0.0.1:57034 conn63: { driver: { name: "PyMongo", version: "3.6.0" }, os: { type: "Windows", name: "Windows 10", architecture: "AMD64", version: "10.0.16299-SP0" }, platform: "CPython 3.6.5.final.0" }
+2018-05-24T17:59:30.375+0300 I NETWORK  [listener] connection accepted from 127.0.0.1:57035 #64 (30 connections now open)
+2018-05-24T17:59:30.386+0300 I NETWORK  [conn64] received client metadata from 127.0.0.1:57035 conn64: { driver: { name: "PyMongo", version: "3.6.0" }, os: { type: "Windows", name: "Windows 10", architecture: "AMD64", version: "10.0.16299-SP0" }, platform: "CPython 3.6.5.final.0" }
+2018-05-24T17:59:30.386+0300 I NETWORK  [listener] connection accepted from 127.0.0.1:57036 #65 (31 connections now open)
+2018-05-24T17:59:30.396+0300 I NETWORK  [conn65] received client metadata from 127.0.0.1:57036 conn65: { driver: { name: "PyMongo", version: "3.6.0" }, os: { type: "Windows", name: "Windows 10", architecture: "AMD64", version: "10.0.16299-SP0" }, platform: "CPython 3.6.5.final.0" }
+2018-05-24T17:59:30.397+0300 I NETWORK  [listener] connection accepted from 127.0.0.1:57037 #66 (32 connections now open)
+2018-05-24T17:59:30.407+0300 I NETWORK  [conn66] received client metadata from 127.0.0.1:57037 conn66: { driver: { name: "PyMongo", version: "3.6.0" }, os: { type: "Windows", name: "Windows 10", architecture: "AMD64", version: "10.0.16299-SP0" }, platform: "CPython 3.6.5.final.0" }
+2018-05-24T17:59:30.407+0300 I NETWORK  [listener] connection accepted from 127.0.0.1:57038 #67 (33 connections now open)
+2018-05-24T17:59:30.418+0300 I NETWORK  [conn67] received client metadata from 127.0.0.1:57038 conn67: { driver: { name: "PyMongo", version: "3.6.0" }, os: { type: "Windows", name: "Windows 10", architecture: "AMD64", version: "10.0.16299-SP0" }, platform: "CPython 3.6.5.final.0" }
+2018-05-24T17:59:30.418+0300 I NETWORK  [listener] connection accepted from 127.0.0.1:57039 #68 (34 connections now open)
+2018-05-24T17:59:30.428+0300 I NETWORK  [conn68] received client metadata from 127.0.0.1:57039 conn68: { driver: { name: "PyMongo", version: "3.6.0" }, os: { type: "Windows", name: "Windows 10", architecture: "AMD64", version: "10.0.16299-SP0" }, platform: "CPython 3.6.5.final.0" }
+2018-05-24T17:59:30.428+0300 I NETWORK  [listener] connection accepted from 127.0.0.1:57040 #69 (35 connections now open)
+2018-05-24T17:59:30.439+0300 I NETWORK  [conn69] received client metadata from 127.0.0.1:57040 conn69: { driver: { name: "PyMongo", version: "3.6.0" }, os: { type: "Windows", name: "Windows 10", architecture: "AMD64", version: "10.0.16299-SP0" }, platform: "CPython 3.6.5.final.0" }
+2018-05-24T17:59:30.439+0300 I NETWORK  [listener] connection accepted from 127.0.0.1:57041 #70 (36 connections now open)
+2018-05-24T17:59:30.450+0300 I NETWORK  [conn70] received client metadata from 127.0.0.1:57041 conn70: { driver: { name: "PyMongo", version: "3.6.0" }, os: { type: "Windows", name: "Windows 10", architecture: "AMD64", version: "10.0.16299-SP0" }, platform: "CPython 3.6.5.final.0" }
+2018-05-24T17:59:30.450+0300 I NETWORK  [listener] connection accepted from 127.0.0.1:57042 #71 (37 connections now open)
+2018-05-24T17:59:30.461+0300 I NETWORK  [conn71] received client metadata from 127.0.0.1:57042 conn71: { driver: { name: "PyMongo", version: "3.6.0" }, os: { type: "Windows", name: "Windows 10", architecture: "AMD64", version: "10.0.16299-SP0" }, platform: "CPython 3.6.5.final.0" }
+2018-05-24T17:59:30.461+0300 I NETWORK  [listener] connection accepted from 127.0.0.1:57043 #72 (38 connections now open)
+2018-05-24T17:59:30.471+0300 I NETWORK  [conn72] received client metadata from 127.0.0.1:57043 conn72: { driver: { name: "PyMongo", version: "3.6.0" }, os: { type: "Windows", name: "Windows 10", architecture: "AMD64", version: "10.0.16299-SP0" }, platform: "CPython 3.6.5.final.0" }
+2018-05-24T17:59:30.471+0300 I NETWORK  [listener] connection accepted from 127.0.0.1:57044 #73 (39 connections now open)
+2018-05-24T17:59:30.482+0300 I NETWORK  [conn73] received client metadata from 127.0.0.1:57044 conn73: { driver: { name: "PyMongo", version: "3.6.0" }, os: { type: "Windows", name: "Windows 10", architecture: "AMD64", version: "10.0.16299-SP0" }, platform: "CPython 3.6.5.final.0" }
+2018-05-24T17:59:30.482+0300 I NETWORK  [listener] connection accepted from 127.0.0.1:57045 #74 (40 connections now open)
+2018-05-24T17:59:30.492+0300 I NETWORK  [conn74] received client metadata from 127.0.0.1:57045 conn74: { driver: { name: "PyMongo", version: "3.6.0" }, os: { type: "Windows", name: "Windows 10", architecture: "AMD64", version: "10.0.16299-SP0" }, platform: "CPython 3.6.5.final.0" }
+2018-05-24T17:59:30.492+0300 I NETWORK  [listener] connection accepted from 127.0.0.1:57046 #75 (41 connections now open)
+2018-05-24T17:59:30.503+0300 I NETWORK  [conn75] received client metadata from 127.0.0.1:57046 conn75: { driver: { name: "PyMongo", version: "3.6.0" }, os: { type: "Windows", name: "Windows 10", architecture: "AMD64", version: "10.0.16299-SP0" }, platform: "CPython 3.6.5.final.0" }
+2018-05-24T17:59:30.503+0300 I NETWORK  [listener] connection accepted from 127.0.0.1:57047 #76 (42 connections now open)
+2018-05-24T17:59:30.514+0300 I NETWORK  [conn76] received client metadata from 127.0.0.1:57047 conn76: { driver: { name: "PyMongo", version: "3.6.0" }, os: { type: "Windows", name: "Windows 10", architecture: "AMD64", version: "10.0.16299-SP0" }, platform: "CPython 3.6.5.final.0" }
+2018-05-24T17:59:33.400+0300 I NETWORK  [conn36] end connection 127.0.0.1:57007 (41 connections now open)
+2018-05-24T17:59:33.400+0300 I NETWORK  [conn35] end connection 127.0.0.1:57006 (40 connections now open)
+2018-05-24T17:59:33.400+0300 I NETWORK  [conn75] end connection 127.0.0.1:57046 (39 connections now open)
+2018-05-24T17:59:33.400+0300 I NETWORK  [conn59] end connection 127.0.0.1:57030 (38 connections now open)
+2018-05-24T17:59:33.400+0300 I NETWORK  [conn74] end connection 127.0.0.1:57045 (37 connections now open)
+2018-05-24T17:59:33.400+0300 I NETWORK  [conn58] end connection 127.0.0.1:57029 (36 connections now open)
+2018-05-24T17:59:33.400+0300 I NETWORK  [conn73] end connection 127.0.0.1:57044 (35 connections now open)
+2018-05-24T17:59:33.401+0300 I NETWORK  [conn56] end connection 127.0.0.1:57027 (34 connections now open)
+2018-05-24T17:59:33.401+0300 I NETWORK  [conn72] end connection 127.0.0.1:57043 (33 connections now open)
+2018-05-24T17:59:33.401+0300 I NETWORK  [conn55] end connection 127.0.0.1:57026 (32 connections now open)
+2018-05-24T17:59:33.401+0300 I NETWORK  [conn71] end connection 127.0.0.1:57042 (31 connections now open)
+2018-05-24T17:59:33.401+0300 I NETWORK  [conn54] end connection 127.0.0.1:57025 (30 connections now open)
+2018-05-24T17:59:33.401+0300 I NETWORK  [conn70] end connection 127.0.0.1:57041 (29 connections now open)
+2018-05-24T17:59:33.401+0300 I NETWORK  [conn53] end connection 127.0.0.1:57024 (28 connections now open)
+2018-05-24T17:59:33.401+0300 I NETWORK  [conn69] end connection 127.0.0.1:57040 (27 connections now open)
+2018-05-24T17:59:33.401+0300 I NETWORK  [conn52] end connection 127.0.0.1:57023 (26 connections now open)
+2018-05-24T17:59:33.402+0300 I NETWORK  [conn50] end connection 127.0.0.1:57021 (24 connections now open)
+2018-05-24T17:59:33.402+0300 I NETWORK  [conn67] end connection 127.0.0.1:57038 (23 connections now open)
+2018-05-24T17:59:33.402+0300 I NETWORK  [conn49] end connection 127.0.0.1:57020 (22 connections now open)
+2018-05-24T17:59:33.402+0300 I NETWORK  [conn66] end connection 127.0.0.1:57037 (21 connections now open)
+2018-05-24T17:59:33.402+0300 I NETWORK  [conn68] end connection 127.0.0.1:57039 (25 connections now open)
+2018-05-24T17:59:33.402+0300 I NETWORK  [conn48] end connection 127.0.0.1:57019 (20 connections now open)
+2018-05-24T17:59:33.402+0300 I NETWORK  [conn47] end connection 127.0.0.1:57018 (18 connections now open)
+2018-05-24T17:59:33.402+0300 I NETWORK  [conn64] end connection 127.0.0.1:57035 (17 connections now open)
+2018-05-24T17:59:33.402+0300 I NETWORK  [conn65] end connection 127.0.0.1:57036 (19 connections now open)
+2018-05-24T17:59:33.403+0300 I NETWORK  [conn45] end connection 127.0.0.1:57016 (16 connections now open)
+2018-05-24T17:59:33.403+0300 I NETWORK  [conn44] end connection 127.0.0.1:57015 (14 connections now open)
+2018-05-24T17:59:33.403+0300 I NETWORK  [conn62] end connection 127.0.0.1:57033 (13 connections now open)
+2018-05-24T17:59:33.403+0300 I NETWORK  [conn43] end connection 127.0.0.1:57014 (12 connections now open)
+2018-05-24T17:59:33.403+0300 I NETWORK  [conn61] end connection 127.0.0.1:57032 (11 connections now open)
+2018-05-24T17:59:33.403+0300 I NETWORK  [conn41] end connection 127.0.0.1:57012 (10 connections now open)
+2018-05-24T17:59:33.403+0300 I NETWORK  [conn63] end connection 127.0.0.1:57034 (15 connections now open)
+2018-05-24T17:59:33.403+0300 I NETWORK  [conn57] end connection 127.0.0.1:57028 (9 connections now open)
+2018-05-24T17:59:33.403+0300 I NETWORK  [conn40] end connection 127.0.0.1:57011 (8 connections now open)
+2018-05-24T17:59:33.403+0300 I NETWORK  [conn51] end connection 127.0.0.1:57022 (7 connections now open)
+2018-05-24T17:59:33.404+0300 I NETWORK  [conn46] end connection 127.0.0.1:57017 (5 connections now open)
+2018-05-24T17:59:33.404+0300 I NETWORK  [conn39] end connection 127.0.0.1:57010 (6 connections now open)
+2018-05-24T17:59:33.404+0300 I NETWORK  [conn42] end connection 127.0.0.1:57013 (3 connections now open)
+2018-05-24T17:59:33.404+0300 I NETWORK  [conn38] end connection 127.0.0.1:57009 (4 connections now open)
+2018-05-24T17:59:33.404+0300 I NETWORK  [conn37] end connection 127.0.0.1:57008 (2 connections now open)
+2018-05-24T17:59:33.404+0300 I NETWORK  [conn76] end connection 127.0.0.1:57047 (1 connection now open)
+2018-05-24T17:59:33.404+0300 I NETWORK  [conn60] end connection 127.0.0.1:57031 (0 connections now open)
+2018-05-24T17:59:34.184+0300 I NETWORK  [listener] connection accepted from 127.0.0.1:57050 #77 (1 connection now open)
+2018-05-24T17:59:34.197+0300 I NETWORK  [conn77] received client metadata from 127.0.0.1:57050 conn77: { driver: { name: "PyMongo", version: "3.6.0" }, os: { type: "Windows", name: "Windows 10", architecture: "AMD64", version: "10.0.16299-SP0" }, platform: "CPython 3.6.5.final.0" }
+2018-05-24T17:59:34.198+0300 I NETWORK  [listener] connection accepted from 127.0.0.1:57051 #78 (2 connections now open)
+2018-05-24T17:59:34.207+0300 I NETWORK  [conn78] received client metadata from 127.0.0.1:57051 conn78: { driver: { name: "PyMongo", version: "3.6.0" }, os: { type: "Windows", name: "Windows 10", architecture: "AMD64", version: "10.0.16299-SP0" }, platform: "CPython 3.6.5.final.0" }
+2018-05-24T17:59:35.289+0300 I COMMAND  [conn78] command test_perf.posts command: find { find: "posts", filter: {}, sort: { score: -1 }, projection: { _id: 1 }, limit: 1000, lsid: { id: UUID("39440389-c150-4d97-a734-f0cf86049c3e") }, $readPreference: { mode: "secondaryPreferred" }, $db: "test_perf" } planSummary: COLLSCAN cursorid:76863246870 keysExamined:0 docsExamined:400035 hasSortStage:1 numYields:3156 nreturned:101 reslen:2720 locks:{ Global: { acquireCount: { r: 6314 } }, Database: { acquireCount: { r: 3157 } }, Collection: { acquireCount: { r: 3157 } } } protocol:op_query 1081ms
+2018-05-24T17:59:35.297+0300 I NETWORK  [listener] connection accepted from 127.0.0.1:57052 #79 (3 connections now open)
+2018-05-24T17:59:35.302+0300 I NETWORK  [listener] connection accepted from 127.0.0.1:57053 #80 (4 connections now open)
+2018-05-24T17:59:35.302+0300 I NETWORK  [conn79] received client metadata from 127.0.0.1:57052 conn79: { driver: { name: "PyMongo", version: "3.6.0" }, os: { type: "Windows", name: "Windows 10", architecture: "AMD64", version: "10.0.16299-SP0" }, platform: "CPython 3.6.5.final.0" }
+2018-05-24T17:59:35.311+0300 I NETWORK  [conn80] received client metadata from 127.0.0.1:57053 conn80: { driver: { name: "PyMongo", version: "3.6.0" }, os: { type: "Windows", name: "Windows 10", architecture: "AMD64", version: "10.0.16299-SP0" }, platform: "CPython 3.6.5.final.0" }
+2018-05-24T17:59:35.311+0300 I NETWORK  [listener] connection accepted from 127.0.0.1:57054 #81 (5 connections now open)
+2018-05-24T17:59:35.321+0300 I NETWORK  [conn81] received client metadata from 127.0.0.1:57054 conn81: { driver: { name: "PyMongo", version: "3.6.0" }, os: { type: "Windows", name: "Windows 10", architecture: "AMD64", version: "10.0.16299-SP0" }, platform: "CPython 3.6.5.final.0" }
+2018-05-24T17:59:35.321+0300 I NETWORK  [listener] connection accepted from 127.0.0.1:57055 #82 (6 connections now open)
+2018-05-24T17:59:35.345+0300 I NETWORK  [conn82] received client metadata from 127.0.0.1:57055 conn82: { driver: { name: "PyMongo", version: "3.6.0" }, os: { type: "Windows", name: "Windows 10", architecture: "AMD64", version: "10.0.16299-SP0" }, platform: "CPython 3.6.5.final.0" }
+2018-05-24T17:59:35.345+0300 I NETWORK  [listener] connection accepted from 127.0.0.1:57056 #83 (7 connections now open)
+2018-05-24T17:59:35.353+0300 I NETWORK  [listener] connection accepted from 127.0.0.1:57057 #84 (8 connections now open)
+2018-05-24T17:59:35.355+0300 I NETWORK  [conn83] received client metadata from 127.0.0.1:57056 conn83: { driver: { name: "PyMongo", version: "3.6.0" }, os: { type: "Windows", name: "Windows 10", architecture: "AMD64", version: "10.0.16299-SP0" }, platform: "CPython 3.6.5.final.0" }
+2018-05-24T17:59:35.360+0300 I NETWORK  [conn84] received client metadata from 127.0.0.1:57057 conn84: { driver: { name: "PyMongo", version: "3.6.0" }, os: { type: "Windows", name: "Windows 10", architecture: "AMD64", version: "10.0.16299-SP0" }, platform: "CPython 3.6.5.final.0" }
+2018-05-24T17:59:35.360+0300 I NETWORK  [listener] connection accepted from 127.0.0.1:57058 #85 (9 connections now open)
+2018-05-24T17:59:35.371+0300 I NETWORK  [conn85] received client metadata from 127.0.0.1:57058 conn85: { driver: { name: "PyMongo", version: "3.6.0" }, os: { type: "Windows", name: "Windows 10", architecture: "AMD64", version: "10.0.16299-SP0" }, platform: "CPython 3.6.5.final.0" }
+2018-05-24T17:59:35.371+0300 I NETWORK  [listener] connection accepted from 127.0.0.1:57059 #86 (10 connections now open)
+2018-05-24T17:59:35.381+0300 I NETWORK  [conn86] received client metadata from 127.0.0.1:57059 conn86: { driver: { name: "PyMongo", version: "3.6.0" }, os: { type: "Windows", name: "Windows 10", architecture: "AMD64", version: "10.0.16299-SP0" }, platform: "CPython 3.6.5.final.0" }
+2018-05-24T17:59:35.381+0300 I NETWORK  [listener] connection accepted from 127.0.0.1:57060 #87 (11 connections now open)
+2018-05-24T17:59:35.392+0300 I NETWORK  [conn87] received client metadata from 127.0.0.1:57060 conn87: { driver: { name: "PyMongo", version: "3.6.0" }, os: { type: "Windows", name: "Windows 10", architecture: "AMD64", version: "10.0.16299-SP0" }, platform: "CPython 3.6.5.final.0" }
+2018-05-24T17:59:35.392+0300 I NETWORK  [listener] connection accepted from 127.0.0.1:57061 #88 (12 connections now open)
+2018-05-24T17:59:35.403+0300 I NETWORK  [conn88] received client metadata from 127.0.0.1:57061 conn88: { driver: { name: "PyMongo", version: "3.6.0" }, os: { type: "Windows", name: "Windows 10", architecture: "AMD64", version: "10.0.16299-SP0" }, platform: "CPython 3.6.5.final.0" }
+2018-05-24T17:59:35.403+0300 I NETWORK  [listener] connection accepted from 127.0.0.1:57062 #89 (13 connections now open)
+2018-05-24T17:59:35.475+0300 I NETWORK  [conn89] received client metadata from 127.0.0.1:57062 conn89: { driver: { name: "PyMongo", version: "3.6.0" }, os: { type: "Windows", name: "Windows 10", architecture: "AMD64", version: "10.0.16299-SP0" }, platform: "CPython 3.6.5.final.0" }
+2018-05-24T17:59:35.475+0300 I NETWORK  [listener] connection accepted from 127.0.0.1:57063 #90 (14 connections now open)
+2018-05-24T17:59:35.479+0300 I NETWORK  [conn90] received client metadata from 127.0.0.1:57063 conn90: { driver: { name: "PyMongo", version: "3.6.0" }, os: { type: "Windows", name: "Windows 10", architecture: "AMD64", version: "10.0.16299-SP0" }, platform: "CPython 3.6.5.final.0" }
+2018-05-24T17:59:35.479+0300 I NETWORK  [listener] connection accepted from 127.0.0.1:57064 #91 (15 connections now open)
+2018-05-24T17:59:35.488+0300 I NETWORK  [conn91] received client metadata from 127.0.0.1:57064 conn91: { driver: { name: "PyMongo", version: "3.6.0" }, os: { type: "Windows", name: "Windows 10", architecture: "AMD64", version: "10.0.16299-SP0" }, platform: "CPython 3.6.5.final.0" }
+2018-05-24T17:59:35.488+0300 I NETWORK  [listener] connection accepted from 127.0.0.1:57065 #92 (16 connections now open)
+2018-05-24T17:59:35.498+0300 I NETWORK  [conn92] received client metadata from 127.0.0.1:57065 conn92: { driver: { name: "PyMongo", version: "3.6.0" }, os: { type: "Windows", name: "Windows 10", architecture: "AMD64", version: "10.0.16299-SP0" }, platform: "CPython 3.6.5.final.0" }
+2018-05-24T17:59:35.498+0300 I NETWORK  [listener] connection accepted from 127.0.0.1:57066 #93 (17 connections now open)
+2018-05-24T17:59:35.509+0300 I NETWORK  [conn93] received client metadata from 127.0.0.1:57066 conn93: { driver: { name: "PyMongo", version: "3.6.0" }, os: { type: "Windows", name: "Windows 10", architecture: "AMD64", version: "10.0.16299-SP0" }, platform: "CPython 3.6.5.final.0" }
+2018-05-24T17:59:35.509+0300 I NETWORK  [listener] connection accepted from 127.0.0.1:57067 #94 (18 connections now open)
+2018-05-24T17:59:35.520+0300 I NETWORK  [conn94] received client metadata from 127.0.0.1:57067 conn94: { driver: { name: "PyMongo", version: "3.6.0" }, os: { type: "Windows", name: "Windows 10", architecture: "AMD64", version: "10.0.16299-SP0" }, platform: "CPython 3.6.5.final.0" }
+2018-05-24T17:59:35.520+0300 I NETWORK  [listener] connection accepted from 127.0.0.1:57068 #95 (19 connections now open)
+2018-05-24T17:59:35.530+0300 I NETWORK  [conn95] received client metadata from 127.0.0.1:57068 conn95: { driver: { name: "PyMongo", version: "3.6.0" }, os: { type: "Windows", name: "Windows 10", architecture: "AMD64", version: "10.0.16299-SP0" }, platform: "CPython 3.6.5.final.0" }
+2018-05-24T17:59:35.531+0300 I NETWORK  [listener] connection accepted from 127.0.0.1:57069 #96 (20 connections now open)
+2018-05-24T17:59:35.541+0300 I NETWORK  [conn96] received client metadata from 127.0.0.1:57069 conn96: { driver: { name: "PyMongo", version: "3.6.0" }, os: { type: "Windows", name: "Windows 10", architecture: "AMD64", version: "10.0.16299-SP0" }, platform: "CPython 3.6.5.final.0" }
+2018-05-24T17:59:35.541+0300 I NETWORK  [listener] connection accepted from 127.0.0.1:57070 #97 (21 connections now open)
+2018-05-24T17:59:35.551+0300 I NETWORK  [conn97] received client metadata from 127.0.0.1:57070 conn97: { driver: { name: "PyMongo", version: "3.6.0" }, os: { type: "Windows", name: "Windows 10", architecture: "AMD64", version: "10.0.16299-SP0" }, platform: "CPython 3.6.5.final.0" }
+2018-05-24T17:59:35.551+0300 I NETWORK  [listener] connection accepted from 127.0.0.1:57071 #98 (22 connections now open)
+2018-05-24T17:59:35.562+0300 I NETWORK  [conn98] received client metadata from 127.0.0.1:57071 conn98: { driver: { name: "PyMongo", version: "3.6.0" }, os: { type: "Windows", name: "Windows 10", architecture: "AMD64", version: "10.0.16299-SP0" }, platform: "CPython 3.6.5.final.0" }
+2018-05-24T17:59:35.562+0300 I NETWORK  [listener] connection accepted from 127.0.0.1:57072 #99 (23 connections now open)
+2018-05-24T17:59:35.572+0300 I NETWORK  [conn99] received client metadata from 127.0.0.1:57072 conn99: { driver: { name: "PyMongo", version: "3.6.0" }, os: { type: "Windows", name: "Windows 10", architecture: "AMD64", version: "10.0.16299-SP0" }, platform: "CPython 3.6.5.final.0" }
+2018-05-24T17:59:35.572+0300 I NETWORK  [listener] connection accepted from 127.0.0.1:57073 #100 (24 connections now open)
+2018-05-24T17:59:35.607+0300 I NETWORK  [conn100] received client metadata from 127.0.0.1:57073 conn100: { driver: { name: "PyMongo", version: "3.6.0" }, os: { type: "Windows", name: "Windows 10", architecture: "AMD64", version: "10.0.16299-SP0" }, platform: "CPython 3.6.5.final.0" }
+2018-05-24T17:59:35.607+0300 I NETWORK  [listener] connection accepted from 127.0.0.1:57074 #101 (25 connections now open)
+2018-05-24T17:59:35.611+0300 I NETWORK  [conn101] received client metadata from 127.0.0.1:57074 conn101: { driver: { name: "PyMongo", version: "3.6.0" }, os: { type: "Windows", name: "Windows 10", architecture: "AMD64", version: "10.0.16299-SP0" }, platform: "CPython 3.6.5.final.0" }
+2018-05-24T17:59:35.611+0300 I NETWORK  [listener] connection accepted from 127.0.0.1:57075 #102 (26 connections now open)
+2018-05-24T17:59:35.621+0300 I NETWORK  [listener] connection accepted from 127.0.0.1:57076 #103 (27 connections now open)
+2018-05-24T17:59:35.621+0300 I NETWORK  [conn102] received client metadata from 127.0.0.1:57075 conn102: { driver: { name: "PyMongo", version: "3.6.0" }, os: { type: "Windows", name: "Windows 10", architecture: "AMD64", version: "10.0.16299-SP0" }, platform: "CPython 3.6.5.final.0" }
+2018-05-24T17:59:35.631+0300 I NETWORK  [conn103] received client metadata from 127.0.0.1:57076 conn103: { driver: { name: "PyMongo", version: "3.6.0" }, os: { type: "Windows", name: "Windows 10", architecture: "AMD64", version: "10.0.16299-SP0" }, platform: "CPython 3.6.5.final.0" }
+2018-05-24T17:59:35.631+0300 I NETWORK  [listener] connection accepted from 127.0.0.1:57077 #104 (28 connections now open)
+2018-05-24T17:59:35.642+0300 I NETWORK  [conn104] received client metadata from 127.0.0.1:57077 conn104: { driver: { name: "PyMongo", version: "3.6.0" }, os: { type: "Windows", name: "Windows 10", architecture: "AMD64", version: "10.0.16299-SP0" }, platform: "CPython 3.6.5.final.0" }
+2018-05-24T17:59:35.642+0300 I NETWORK  [listener] connection accepted from 127.0.0.1:57078 #105 (29 connections now open)
+2018-05-24T17:59:35.652+0300 I NETWORK  [conn105] received client metadata from 127.0.0.1:57078 conn105: { driver: { name: "PyMongo", version: "3.6.0" }, os: { type: "Windows", name: "Windows 10", architecture: "AMD64", version: "10.0.16299-SP0" }, platform: "CPython 3.6.5.final.0" }
+2018-05-24T17:59:35.652+0300 I NETWORK  [listener] connection accepted from 127.0.0.1:57079 #106 (30 connections now open)
+2018-05-24T17:59:35.663+0300 I NETWORK  [conn106] received client metadata from 127.0.0.1:57079 conn106: { driver: { name: "PyMongo", version: "3.6.0" }, os: { type: "Windows", name: "Windows 10", architecture: "AMD64", version: "10.0.16299-SP0" }, platform: "CPython 3.6.5.final.0" }
+2018-05-24T17:59:35.663+0300 I NETWORK  [listener] connection accepted from 127.0.0.1:57080 #107 (31 connections now open)
+2018-05-24T17:59:35.674+0300 I NETWORK  [conn107] received client metadata from 127.0.0.1:57080 conn107: { driver: { name: "PyMongo", version: "3.6.0" }, os: { type: "Windows", name: "Windows 10", architecture: "AMD64", version: "10.0.16299-SP0" }, platform: "CPython 3.6.5.final.0" }
+2018-05-24T17:59:35.674+0300 I NETWORK  [listener] connection accepted from 127.0.0.1:57081 #108 (32 connections now open)
+2018-05-24T17:59:35.684+0300 I NETWORK  [conn108] received client metadata from 127.0.0.1:57081 conn108: { driver: { name: "PyMongo", version: "3.6.0" }, os: { type: "Windows", name: "Windows 10", architecture: "AMD64", version: "10.0.16299-SP0" }, platform: "CPython 3.6.5.final.0" }
+2018-05-24T17:59:35.684+0300 I NETWORK  [listener] connection accepted from 127.0.0.1:57082 #109 (33 connections now open)
+2018-05-24T17:59:35.695+0300 I NETWORK  [conn109] received client metadata from 127.0.0.1:57082 conn109: { driver: { name: "PyMongo", version: "3.6.0" }, os: { type: "Windows", name: "Windows 10", architecture: "AMD64", version: "10.0.16299-SP0" }, platform: "CPython 3.6.5.final.0" }
+2018-05-24T17:59:35.695+0300 I NETWORK  [listener] connection accepted from 127.0.0.1:57083 #110 (34 connections now open)
+2018-05-24T17:59:35.706+0300 I NETWORK  [conn110] received client metadata from 127.0.0.1:57083 conn110: { driver: { name: "PyMongo", version: "3.6.0" }, os: { type: "Windows", name: "Windows 10", architecture: "AMD64", version: "10.0.16299-SP0" }, platform: "CPython 3.6.5.final.0" }
+2018-05-24T17:59:35.706+0300 I NETWORK  [listener] connection accepted from 127.0.0.1:57084 #111 (35 connections now open)
+2018-05-24T17:59:35.717+0300 I NETWORK  [conn111] received client metadata from 127.0.0.1:57084 conn111: { driver: { name: "PyMongo", version: "3.6.0" }, os: { type: "Windows", name: "Windows 10", architecture: "AMD64", version: "10.0.16299-SP0" }, platform: "CPython 3.6.5.final.0" }
+2018-05-24T17:59:35.717+0300 I NETWORK  [listener] connection accepted from 127.0.0.1:57085 #112 (36 connections now open)
+2018-05-24T17:59:35.728+0300 I NETWORK  [conn112] received client metadata from 127.0.0.1:57085 conn112: { driver: { name: "PyMongo", version: "3.6.0" }, os: { type: "Windows", name: "Windows 10", architecture: "AMD64", version: "10.0.16299-SP0" }, platform: "CPython 3.6.5.final.0" }
+2018-05-24T17:59:35.728+0300 I NETWORK  [listener] connection accepted from 127.0.0.1:57086 #113 (37 connections now open)
+2018-05-24T17:59:35.738+0300 I NETWORK  [conn113] received client metadata from 127.0.0.1:57086 conn113: { driver: { name: "PyMongo", version: "3.6.0" }, os: { type: "Windows", name: "Windows 10", architecture: "AMD64", version: "10.0.16299-SP0" }, platform: "CPython 3.6.5.final.0" }
+2018-05-24T17:59:35.738+0300 I NETWORK  [listener] connection accepted from 127.0.0.1:57087 #114 (38 connections now open)
+2018-05-24T17:59:35.749+0300 I NETWORK  [conn114] received client metadata from 127.0.0.1:57087 conn114: { driver: { name: "PyMongo", version: "3.6.0" }, os: { type: "Windows", name: "Windows 10", architecture: "AMD64", version: "10.0.16299-SP0" }, platform: "CPython 3.6.5.final.0" }
+2018-05-24T17:59:35.749+0300 I NETWORK  [listener] connection accepted from 127.0.0.1:57088 #115 (39 connections now open)
+2018-05-24T17:59:35.759+0300 I NETWORK  [conn115] received client metadata from 127.0.0.1:57088 conn115: { driver: { name: "PyMongo", version: "3.6.0" }, os: { type: "Windows", name: "Windows 10", architecture: "AMD64", version: "10.0.16299-SP0" }, platform: "CPython 3.6.5.final.0" }
+2018-05-24T17:59:35.759+0300 I NETWORK  [listener] connection accepted from 127.0.0.1:57089 #116 (40 connections now open)
+2018-05-24T17:59:35.769+0300 I NETWORK  [conn116] received client metadata from 127.0.0.1:57089 conn116: { driver: { name: "PyMongo", version: "3.6.0" }, os: { type: "Windows", name: "Windows 10", architecture: "AMD64", version: "10.0.16299-SP0" }, platform: "CPython 3.6.5.final.0" }
+2018-05-24T17:59:35.770+0300 I NETWORK  [listener] connection accepted from 127.0.0.1:57090 #117 (41 connections now open)
+2018-05-24T17:59:35.780+0300 I NETWORK  [conn117] received client metadata from 127.0.0.1:57090 conn117: { driver: { name: "PyMongo", version: "3.6.0" }, os: { type: "Windows", name: "Windows 10", architecture: "AMD64", version: "10.0.16299-SP0" }, platform: "CPython 3.6.5.final.0" }
+2018-05-24T17:59:35.780+0300 I NETWORK  [listener] connection accepted from 127.0.0.1:57091 #118 (42 connections now open)
+2018-05-24T17:59:35.791+0300 I NETWORK  [conn118] received client metadata from 127.0.0.1:57091 conn118: { driver: { name: "PyMongo", version: "3.6.0" }, os: { type: "Windows", name: "Windows 10", architecture: "AMD64", version: "10.0.16299-SP0" }, platform: "CPython 3.6.5.final.0" }
+2018-05-24T17:59:35.791+0300 I NETWORK  [listener] connection accepted from 127.0.0.1:57092 #119 (43 connections now open)
+2018-05-24T17:59:35.802+0300 I NETWORK  [conn119] received client metadata from 127.0.0.1:57092 conn119: { driver: { name: "PyMongo", version: "3.6.0" }, os: { type: "Windows", name: "Windows 10", architecture: "AMD64", version: "10.0.16299-SP0" }, platform: "CPython 3.6.5.final.0" }
+2018-05-24T17:59:35.802+0300 I NETWORK  [listener] connection accepted from 127.0.0.1:57093 #120 (44 connections now open)
+2018-05-24T17:59:35.813+0300 I NETWORK  [conn120] received client metadata from 127.0.0.1:57093 conn120: { driver: { name: "PyMongo", version: "3.6.0" }, os: { type: "Windows", name: "Windows 10", architecture: "AMD64", version: "10.0.16299-SP0" }, platform: "CPython 3.6.5.final.0" }
+2018-05-24T17:59:35.813+0300 I NETWORK  [listener] connection accepted from 127.0.0.1:57094 #121 (45 connections now open)
+2018-05-24T17:59:35.823+0300 I NETWORK  [conn121] received client metadata from 127.0.0.1:57094 conn121: { driver: { name: "PyMongo", version: "3.6.0" }, os: { type: "Windows", name: "Windows 10", architecture: "AMD64", version: "10.0.16299-SP0" }, platform: "CPython 3.6.5.final.0" }
+2018-05-24T17:59:35.823+0300 I NETWORK  [listener] connection accepted from 127.0.0.1:57095 #122 (46 connections now open)
+2018-05-24T17:59:35.834+0300 I NETWORK  [listener] connection accepted from 127.0.0.1:57096 #123 (47 connections now open)
+2018-05-24T17:59:35.834+0300 I NETWORK  [conn122] received client metadata from 127.0.0.1:57095 conn122: { driver: { name: "PyMongo", version: "3.6.0" }, os: { type: "Windows", name: "Windows 10", architecture: "AMD64", version: "10.0.16299-SP0" }, platform: "CPython 3.6.5.final.0" }
+2018-05-24T17:59:35.844+0300 I NETWORK  [conn123] received client metadata from 127.0.0.1:57096 conn123: { driver: { name: "PyMongo", version: "3.6.0" }, os: { type: "Windows", name: "Windows 10", architecture: "AMD64", version: "10.0.16299-SP0" }, platform: "CPython 3.6.5.final.0" }
+2018-05-24T17:59:35.844+0300 I NETWORK  [listener] connection accepted from 127.0.0.1:57097 #124 (48 connections now open)
+2018-05-24T17:59:35.855+0300 I NETWORK  [conn124] received client metadata from 127.0.0.1:57097 conn124: { driver: { name: "PyMongo", version: "3.6.0" }, os: { type: "Windows", name: "Windows 10", architecture: "AMD64", version: "10.0.16299-SP0" }, platform: "CPython 3.6.5.final.0" }
+2018-05-24T17:59:35.855+0300 I NETWORK  [listener] connection accepted from 127.0.0.1:57098 #125 (49 connections now open)
+2018-05-24T17:59:35.865+0300 I NETWORK  [conn125] received client metadata from 127.0.0.1:57098 conn125: { driver: { name: "PyMongo", version: "3.6.0" }, os: { type: "Windows", name: "Windows 10", architecture: "AMD64", version: "10.0.16299-SP0" }, platform: "CPython 3.6.5.final.0" }
+2018-05-24T17:59:35.865+0300 I NETWORK  [listener] connection accepted from 127.0.0.1:57099 #126 (50 connections now open)
+2018-05-24T17:59:35.876+0300 I NETWORK  [conn126] received client metadata from 127.0.0.1:57099 conn126: { driver: { name: "PyMongo", version: "3.6.0" }, os: { type: "Windows", name: "Windows 10", architecture: "AMD64", version: "10.0.16299-SP0" }, platform: "CPython 3.6.5.final.0" }
+2018-05-24T17:59:35.876+0300 I NETWORK  [listener] connection accepted from 127.0.0.1:57100 #127 (51 connections now open)
+2018-05-24T17:59:35.887+0300 I NETWORK  [conn127] received client metadata from 127.0.0.1:57100 conn127: { driver: { name: "PyMongo", version: "3.6.0" }, os: { type: "Windows", name: "Windows 10", architecture: "AMD64", version: "10.0.16299-SP0" }, platform: "CPython 3.6.5.final.0" }
+2018-05-24T17:59:35.887+0300 I NETWORK  [listener] connection accepted from 127.0.0.1:57101 #128 (52 connections now open)
+2018-05-24T17:59:35.917+0300 I NETWORK  [conn128] received client metadata from 127.0.0.1:57101 conn128: { driver: { name: "PyMongo", version: "3.6.0" }, os: { type: "Windows", name: "Windows 10", architecture: "AMD64", version: "10.0.16299-SP0" }, platform: "CPython 3.6.5.final.0" }
+2018-05-24T17:59:35.917+0300 I NETWORK  [listener] connection accepted from 127.0.0.1:57102 #129 (53 connections now open)
+2018-05-24T17:59:35.921+0300 I NETWORK  [conn129] received client metadata from 127.0.0.1:57102 conn129: { driver: { name: "PyMongo", version: "3.6.0" }, os: { type: "Windows", name: "Windows 10", architecture: "AMD64", version: "10.0.16299-SP0" }, platform: "CPython 3.6.5.final.0" }
+2018-05-24T17:59:35.921+0300 I NETWORK  [listener] connection accepted from 127.0.0.1:57103 #130 (54 connections now open)
+2018-05-24T17:59:35.931+0300 I NETWORK  [conn130] received client metadata from 127.0.0.1:57103 conn130: { driver: { name: "PyMongo", version: "3.6.0" }, os: { type: "Windows", name: "Windows 10", architecture: "AMD64", version: "10.0.16299-SP0" }, platform: "CPython 3.6.5.final.0" }
+2018-05-24T17:59:35.931+0300 I NETWORK  [listener] connection accepted from 127.0.0.1:57104 #131 (55 connections now open)
+2018-05-24T17:59:35.942+0300 I NETWORK  [conn131] received client metadata from 127.0.0.1:57104 conn131: { driver: { name: "PyMongo", version: "3.6.0" }, os: { type: "Windows", name: "Windows 10", architecture: "AMD64", version: "10.0.16299-SP0" }, platform: "CPython 3.6.5.final.0" }
+2018-05-24T17:59:35.942+0300 I NETWORK  [listener] connection accepted from 127.0.0.1:57105 #132 (56 connections now open)
+2018-05-24T17:59:35.952+0300 I NETWORK  [conn132] received client metadata from 127.0.0.1:57105 conn132: { driver: { name: "PyMongo", version: "3.6.0" }, os: { type: "Windows", name: "Windows 10", architecture: "AMD64", version: "10.0.16299-SP0" }, platform: "CPython 3.6.5.final.0" }
+2018-05-24T17:59:35.952+0300 I NETWORK  [listener] connection accepted from 127.0.0.1:57106 #133 (57 connections now open)
+2018-05-24T17:59:35.963+0300 I NETWORK  [conn133] received client metadata from 127.0.0.1:57106 conn133: { driver: { name: "PyMongo", version: "3.6.0" }, os: { type: "Windows", name: "Windows 10", architecture: "AMD64", version: "10.0.16299-SP0" }, platform: "CPython 3.6.5.final.0" }
+2018-05-24T17:59:35.963+0300 I NETWORK  [listener] connection accepted from 127.0.0.1:57107 #134 (58 connections now open)
+2018-05-24T17:59:35.973+0300 I NETWORK  [conn134] received client metadata from 127.0.0.1:57107 conn134: { driver: { name: "PyMongo", version: "3.6.0" }, os: { type: "Windows", name: "Windows 10", architecture: "AMD64", version: "10.0.16299-SP0" }, platform: "CPython 3.6.5.final.0" }
+2018-05-24T17:59:35.973+0300 I NETWORK  [listener] connection accepted from 127.0.0.1:57108 #135 (59 connections now open)
+2018-05-24T17:59:35.984+0300 I NETWORK  [conn135] received client metadata from 127.0.0.1:57108 conn135: { driver: { name: "PyMongo", version: "3.6.0" }, os: { type: "Windows", name: "Windows 10", architecture: "AMD64", version: "10.0.16299-SP0" }, platform: "CPython 3.6.5.final.0" }
+2018-05-24T17:59:35.984+0300 I NETWORK  [listener] connection accepted from 127.0.0.1:57109 #136 (60 connections now open)
+2018-05-24T17:59:35.995+0300 I NETWORK  [conn136] received client metadata from 127.0.0.1:57109 conn136: { driver: { name: "PyMongo", version: "3.6.0" }, os: { type: "Windows", name: "Windows 10", architecture: "AMD64", version: "10.0.16299-SP0" }, platform: "CPython 3.6.5.final.0" }
+2018-05-24T17:59:35.995+0300 I NETWORK  [listener] connection accepted from 127.0.0.1:57110 #137 (61 connections now open)
+2018-05-24T17:59:36.006+0300 I NETWORK  [conn137] received client metadata from 127.0.0.1:57110 conn137: { driver: { name: "PyMongo", version: "3.6.0" }, os: { type: "Windows", name: "Windows 10", architecture: "AMD64", version: "10.0.16299-SP0" }, platform: "CPython 3.6.5.final.0" }
+2018-05-24T17:59:36.006+0300 I NETWORK  [listener] connection accepted from 127.0.0.1:57111 #138 (62 connections now open)
+2018-05-24T17:59:36.016+0300 I NETWORK  [conn138] received client metadata from 127.0.0.1:57111 conn138: { driver: { name: "PyMongo", version: "3.6.0" }, os: { type: "Windows", name: "Windows 10", architecture: "AMD64", version: "10.0.16299-SP0" }, platform: "CPython 3.6.5.final.0" }
+2018-05-24T17:59:36.017+0300 I NETWORK  [listener] connection accepted from 127.0.0.1:57112 #139 (63 connections now open)
+2018-05-24T17:59:36.027+0300 I NETWORK  [conn139] received client metadata from 127.0.0.1:57112 conn139: { driver: { name: "PyMongo", version: "3.6.0" }, os: { type: "Windows", name: "Windows 10", architecture: "AMD64", version: "10.0.16299-SP0" }, platform: "CPython 3.6.5.final.0" }
+2018-05-24T17:59:36.027+0300 I NETWORK  [listener] connection accepted from 127.0.0.1:57113 #140 (64 connections now open)
+2018-05-24T17:59:36.038+0300 I NETWORK  [listener] connection accepted from 127.0.0.1:57114 #141 (65 connections now open)
+2018-05-24T17:59:36.038+0300 I NETWORK  [conn140] received client metadata from 127.0.0.1:57113 conn140: { driver: { name: "PyMongo", version: "3.6.0" }, os: { type: "Windows", name: "Windows 10", architecture: "AMD64", version: "10.0.16299-SP0" }, platform: "CPython 3.6.5.final.0" }
+2018-05-24T17:59:36.049+0300 I NETWORK  [conn141] received client metadata from 127.0.0.1:57114 conn141: { driver: { name: "PyMongo", version: "3.6.0" }, os: { type: "Windows", name: "Windows 10", architecture: "AMD64", version: "10.0.16299-SP0" }, platform: "CPython 3.6.5.final.0" }
+2018-05-24T17:59:36.049+0300 I NETWORK  [listener] connection accepted from 127.0.0.1:57115 #142 (66 connections now open)
+2018-05-24T17:59:36.059+0300 I NETWORK  [conn142] received client metadata from 127.0.0.1:57115 conn142: { driver: { name: "PyMongo", version: "3.6.0" }, os: { type: "Windows", name: "Windows 10", architecture: "AMD64", version: "10.0.16299-SP0" }, platform: "CPython 3.6.5.final.0" }
+2018-05-24T17:59:36.060+0300 I NETWORK  [listener] connection accepted from 127.0.0.1:57116 #143 (67 connections now open)
+2018-05-24T17:59:36.070+0300 I NETWORK  [conn143] received client metadata from 127.0.0.1:57116 conn143: { driver: { name: "PyMongo", version: "3.6.0" }, os: { type: "Windows", name: "Windows 10", architecture: "AMD64", version: "10.0.16299-SP0" }, platform: "CPython 3.6.5.final.0" }
+2018-05-24T17:59:36.070+0300 I NETWORK  [listener] connection accepted from 127.0.0.1:57117 #144 (68 connections now open)
+2018-05-24T17:59:36.081+0300 I NETWORK  [conn144] received client metadata from 127.0.0.1:57117 conn144: { driver: { name: "PyMongo", version: "3.6.0" }, os: { type: "Windows", name: "Windows 10", architecture: "AMD64", version: "10.0.16299-SP0" }, platform: "CPython 3.6.5.final.0" }
+2018-05-24T17:59:36.081+0300 I NETWORK  [listener] connection accepted from 127.0.0.1:57118 #145 (69 connections now open)
+2018-05-24T17:59:36.092+0300 I NETWORK  [listener] connection accepted from 127.0.0.1:57119 #146 (70 connections now open)
+2018-05-24T17:59:36.093+0300 I NETWORK  [conn145] received client metadata from 127.0.0.1:57118 conn145: { driver: { name: "PyMongo", version: "3.6.0" }, os: { type: "Windows", name: "Windows 10", architecture: "AMD64", version: "10.0.16299-SP0" }, platform: "CPython 3.6.5.final.0" }
+2018-05-24T17:59:36.103+0300 I NETWORK  [conn146] received client metadata from 127.0.0.1:57119 conn146: { driver: { name: "PyMongo", version: "3.6.0" }, os: { type: "Windows", name: "Windows 10", architecture: "AMD64", version: "10.0.16299-SP0" }, platform: "CPython 3.6.5.final.0" }
+2018-05-24T17:59:36.103+0300 I NETWORK  [listener] connection accepted from 127.0.0.1:57120 #147 (71 connections now open)
+2018-05-24T17:59:36.113+0300 I NETWORK  [conn147] received client metadata from 127.0.0.1:57120 conn147: { driver: { name: "PyMongo", version: "3.6.0" }, os: { type: "Windows", name: "Windows 10", architecture: "AMD64", version: "10.0.16299-SP0" }, platform: "CPython 3.6.5.final.0" }
+2018-05-24T17:59:36.113+0300 I NETWORK  [listener] connection accepted from 127.0.0.1:57121 #148 (72 connections now open)
+2018-05-24T17:59:36.124+0300 I NETWORK  [conn148] received client metadata from 127.0.0.1:57121 conn148: { driver: { name: "PyMongo", version: "3.6.0" }, os: { type: "Windows", name: "Windows 10", architecture: "AMD64", version: "10.0.16299-SP0" }, platform: "CPython 3.6.5.final.0" }
+2018-05-24T17:59:36.124+0300 I NETWORK  [listener] connection accepted from 127.0.0.1:57122 #149 (73 connections now open)
+2018-05-24T17:59:36.135+0300 I NETWORK  [listener] connection accepted from 127.0.0.1:57123 #150 (74 connections now open)
+2018-05-24T17:59:36.135+0300 I NETWORK  [conn149] received client metadata from 127.0.0.1:57122 conn149: { driver: { name: "PyMongo", version: "3.6.0" }, os: { type: "Windows", name: "Windows 10", architecture: "AMD64", version: "10.0.16299-SP0" }, platform: "CPython 3.6.5.final.0" }
+2018-05-24T17:59:36.145+0300 I NETWORK  [conn150] received client metadata from 127.0.0.1:57123 conn150: { driver: { name: "PyMongo", version: "3.6.0" }, os: { type: "Windows", name: "Windows 10", architecture: "AMD64", version: "10.0.16299-SP0" }, platform: "CPython 3.6.5.final.0" }
+2018-05-24T17:59:36.145+0300 I NETWORK  [listener] connection accepted from 127.0.0.1:57124 #151 (75 connections now open)
+2018-05-24T17:59:36.155+0300 I NETWORK  [conn151] received client metadata from 127.0.0.1:57124 conn151: { driver: { name: "PyMongo", version: "3.6.0" }, os: { type: "Windows", name: "Windows 10", architecture: "AMD64", version: "10.0.16299-SP0" }, platform: "CPython 3.6.5.final.0" }
+2018-05-24T17:59:36.155+0300 I NETWORK  [listener] connection accepted from 127.0.0.1:57125 #152 (76 connections now open)
+2018-05-24T17:59:36.166+0300 I NETWORK  [conn152] received client metadata from 127.0.0.1:57125 conn152: { driver: { name: "PyMongo", version: "3.6.0" }, os: { type: "Windows", name: "Windows 10", architecture: "AMD64", version: "10.0.16299-SP0" }, platform: "CPython 3.6.5.final.0" }
+2018-05-24T17:59:36.166+0300 I NETWORK  [listener] connection accepted from 127.0.0.1:57126 #153 (77 connections now open)
+2018-05-24T17:59:36.177+0300 I NETWORK  [conn153] received client metadata from 127.0.0.1:57126 conn153: { driver: { name: "PyMongo", version: "3.6.0" }, os: { type: "Windows", name: "Windows 10", architecture: "AMD64", version: "10.0.16299-SP0" }, platform: "CPython 3.6.5.final.0" }
+2018-05-24T17:59:36.177+0300 I NETWORK  [listener] connection accepted from 127.0.0.1:57127 #154 (78 connections now open)
+2018-05-24T17:59:36.188+0300 I NETWORK  [conn154] received client metadata from 127.0.0.1:57127 conn154: { driver: { name: "PyMongo", version: "3.6.0" }, os: { type: "Windows", name: "Windows 10", architecture: "AMD64", version: "10.0.16299-SP0" }, platform: "CPython 3.6.5.final.0" }
+2018-05-24T17:59:36.188+0300 I NETWORK  [listener] connection accepted from 127.0.0.1:57128 #155 (79 connections now open)
+2018-05-24T17:59:36.199+0300 I NETWORK  [conn155] received client metadata from 127.0.0.1:57128 conn155: { driver: { name: "PyMongo", version: "3.6.0" }, os: { type: "Windows", name: "Windows 10", architecture: "AMD64", version: "10.0.16299-SP0" }, platform: "CPython 3.6.5.final.0" }
+2018-05-24T17:59:36.199+0300 I NETWORK  [listener] connection accepted from 127.0.0.1:57129 #156 (80 connections now open)
+2018-05-24T17:59:36.209+0300 I NETWORK  [conn156] received client metadata from 127.0.0.1:57129 conn156: { driver: { name: "PyMongo", version: "3.6.0" }, os: { type: "Windows", name: "Windows 10", architecture: "AMD64", version: "10.0.16299-SP0" }, platform: "CPython 3.6.5.final.0" }
+2018-05-24T17:59:36.209+0300 I NETWORK  [listener] connection accepted from 127.0.0.1:57130 #157 (81 connections now open)
+2018-05-24T17:59:36.220+0300 I NETWORK  [conn157] received client metadata from 127.0.0.1:57130 conn157: { driver: { name: "PyMongo", version: "3.6.0" }, os: { type: "Windows", name: "Windows 10", architecture: "AMD64", version: "10.0.16299-SP0" }, platform: "CPython 3.6.5.final.0" }
+2018-05-24T17:59:36.220+0300 I NETWORK  [listener] connection accepted from 127.0.0.1:57131 #158 (82 connections now open)
+2018-05-24T17:59:36.231+0300 I NETWORK  [conn158] received client metadata from 127.0.0.1:57131 conn158: { driver: { name: "PyMongo", version: "3.6.0" }, os: { type: "Windows", name: "Windows 10", architecture: "AMD64", version: "10.0.16299-SP0" }, platform: "CPython 3.6.5.final.0" }
+2018-05-24T17:59:40.572+0300 I NETWORK  [conn78] end connection 127.0.0.1:57051 (81 connections now open)
+2018-05-24T17:59:40.572+0300 I NETWORK  [conn77] end connection 127.0.0.1:57050 (80 connections now open)
+2018-05-24T17:59:40.572+0300 I NETWORK  [conn157] end connection 127.0.0.1:57130 (79 connections now open)
+2018-05-24T17:59:40.572+0300 I NETWORK  [conn124] end connection 127.0.0.1:57097 (78 connections now open)
+2018-05-24T17:59:40.572+0300 I NETWORK  [conn156] end connection 127.0.0.1:57129 (77 connections now open)
+2018-05-24T17:59:40.572+0300 I NETWORK  [conn123] end connection 127.0.0.1:57096 (76 connections now open)
+2018-05-24T17:59:40.573+0300 I NETWORK  [conn155] end connection 127.0.0.1:57128 (75 connections now open)
+2018-05-24T17:59:40.573+0300 I NETWORK  [conn154] end connection 127.0.0.1:57127 (73 connections now open)
+2018-05-24T17:59:40.573+0300 I NETWORK  [conn120] end connection 127.0.0.1:57093 (72 connections now open)
+2018-05-24T17:59:40.573+0300 I NETWORK  [conn152] end connection 127.0.0.1:57125 (70 connections now open)
+2018-05-24T17:59:40.573+0300 I NETWORK  [conn153] end connection 127.0.0.1:57126 (71 connections now open)
+2018-05-24T17:59:40.573+0300 I NETWORK  [conn150] end connection 127.0.0.1:57123 (65 connections now open)
+2018-05-24T17:59:40.573+0300 I NETWORK  [conn118] end connection 127.0.0.1:57091 (68 connections now open)
+2018-05-24T17:59:40.573+0300 I NETWORK  [conn115] end connection 127.0.0.1:57088 (62 connections now open)
+2018-05-24T17:59:40.574+0300 I NETWORK  [conn147] end connection 127.0.0.1:57120 (59 connections now open)
+2018-05-24T17:59:40.574+0300 I NETWORK  [conn112] end connection 127.0.0.1:57085 (58 connections now open)
+2018-05-24T17:59:40.574+0300 I NETWORK  [conn146] end connection 127.0.0.1:57119 (57 connections now open)
+2018-05-24T17:59:40.574+0300 I NETWORK  [conn111] end connection 127.0.0.1:57084 (56 connections now open)
+2018-05-24T17:59:40.573+0300 I NETWORK  [conn116] end connection 127.0.0.1:57089 (64 connections now open)
+2018-05-24T17:59:40.574+0300 I NETWORK  [conn145] end connection 127.0.0.1:57118 (55 connections now open)
+2018-05-24T17:59:40.574+0300 I NETWORK  [conn143] end connection 127.0.0.1:57116 (51 connections now open)
+2018-05-24T17:59:40.575+0300 I NETWORK  [conn106] end connection 127.0.0.1:57079 (48 connections now open)
+2018-05-24T17:59:40.575+0300 I NETWORK  [conn141] end connection 127.0.0.1:57114 (47 connections now open)
+2018-05-24T17:59:40.574+0300 I NETWORK  [conn114] end connection 127.0.0.1:57087 (60 connections now open)
+2018-05-24T17:59:40.575+0300 I NETWORK  [conn103] end connection 127.0.0.1:57076 (44 connections now open)
+2018-05-24T17:59:40.575+0300 I NETWORK  [conn139] end connection 127.0.0.1:57112 (43 connections now open)
+2018-05-24T17:59:40.575+0300 I NETWORK  [conn102] end connection 127.0.0.1:57075 (42 connections now open)
+2018-05-24T17:59:40.575+0300 I NETWORK  [conn101] end connection 127.0.0.1:57074 (40 connections now open)
+2018-05-24T17:59:40.575+0300 I NETWORK  [conn100] end connection 127.0.0.1:57073 (38 connections now open)
+2018-05-24T17:59:40.575+0300 I NETWORK  [conn136] end connection 127.0.0.1:57109 (37 connections now open)
+2018-05-24T17:59:40.576+0300 I NETWORK  [conn99] end connection 127.0.0.1:57072 (36 connections now open)
+2018-05-24T17:59:40.576+0300 I NETWORK  [conn135] end connection 127.0.0.1:57108 (35 connections now open)
+2018-05-24T17:59:40.576+0300 I NETWORK  [conn98] end connection 127.0.0.1:57071 (34 connections now open)
+2018-05-24T17:59:40.576+0300 I NETWORK  [conn97] end connection 127.0.0.1:57070 (32 connections now open)
+2018-05-24T17:59:40.573+0300 I NETWORK  [conn148] end connection 127.0.0.1:57121 (61 connections now open)
+2018-05-24T17:59:40.576+0300 I NETWORK  [conn133] end connection 127.0.0.1:57106 (31 connections now open)
+2018-05-24T17:59:40.576+0300 I NETWORK  [conn132] end connection 127.0.0.1:57105 (29 connections now open)
+2018-05-24T17:59:40.574+0300 I NETWORK  [conn142] end connection 127.0.0.1:57115 (49 connections now open)
+2018-05-24T17:59:40.577+0300 I NETWORK  [conn131] end connection 127.0.0.1:57104 (27 connections now open)
+2018-05-24T17:59:40.573+0300 I NETWORK  [conn121] end connection 127.0.0.1:57094 (74 connections now open)
+2018-05-24T17:59:40.577+0300 I NETWORK  [conn130] end connection 127.0.0.1:57103 (25 connections now open)
+2018-05-24T17:59:40.575+0300 I NETWORK  [conn104] end connection 127.0.0.1:57077 (46 connections now open)
+2018-05-24T17:59:40.577+0300 I NETWORK  [conn129] end connection 127.0.0.1:57102 (23 connections now open)
+2018-05-24T17:59:40.573+0300 I NETWORK  [conn151] end connection 127.0.0.1:57124 (67 connections now open)
+2018-05-24T17:59:40.577+0300 I NETWORK  [conn90] end connection 127.0.0.1:57063 (20 connections now open)
+2018-05-24T17:59:40.573+0300 I NETWORK  [conn119] end connection 127.0.0.1:57092 (69 connections now open)
+2018-05-24T17:59:40.574+0300 I NETWORK  [conn110] end connection 127.0.0.1:57083 (54 connections now open)
+2018-05-24T17:59:40.578+0300 I NETWORK  [conn87] end connection 127.0.0.1:57060 (14 connections now open)
+2018-05-24T17:59:40.574+0300 I NETWORK  [conn109] end connection 127.0.0.1:57082 (52 connections now open)
+2018-05-24T17:59:40.578+0300 I NETWORK  [conn108] end connection 127.0.0.1:57081 (11 connections now open)
+2018-05-24T17:59:40.578+0300 I NETWORK  [conn84] end connection 127.0.0.1:57057 (10 connections now open)
+2018-05-24T17:59:40.576+0300 I NETWORK  [conn96] end connection 127.0.0.1:57069 (30 connections now open)
+2018-05-24T17:59:40.578+0300 I NETWORK  [conn81] end connection 127.0.0.1:57054 (6 connections now open)
+2018-05-24T17:59:40.576+0300 I NETWORK  [conn95] end connection 127.0.0.1:57068 (28 connections now open)
+2018-05-24T17:59:40.578+0300 I NETWORK  [conn79] end connection 127.0.0.1:57052 (2 connections now open)
+2018-05-24T17:59:40.573+0300 I NETWORK  [conn117] end connection 127.0.0.1:57090 (66 connections now open)
+2018-05-24T17:59:40.575+0300 I NETWORK  [conn138] end connection 127.0.0.1:57111 (41 connections now open)
+2018-05-24T17:59:40.577+0300 I NETWORK  [conn126] end connection 127.0.0.1:57099 (17 connections now open)
+2018-05-24T17:59:40.577+0300 I NETWORK  [conn88] end connection 127.0.0.1:57061 (16 connections now open)
+2018-05-24T17:59:40.575+0300 I NETWORK  [conn137] end connection 127.0.0.1:57110 (39 connections now open)
+2018-05-24T17:59:40.577+0300 I NETWORK  [conn122] end connection 127.0.0.1:57095 (15 connections now open)
+2018-05-24T17:59:40.578+0300 I NETWORK  [conn113] end connection 127.0.0.1:57086 (13 connections now open)
+2018-05-24T17:59:40.578+0300 I NETWORK  [conn85] end connection 127.0.0.1:57058 (12 connections now open)
+2018-05-24T17:59:40.574+0300 I NETWORK  [conn144] end connection 127.0.0.1:57117 (53 connections now open)
+2018-05-24T17:59:40.573+0300 I NETWORK  [conn149] end connection 127.0.0.1:57122 (63 connections now open)
+2018-05-24T17:59:40.576+0300 I NETWORK  [conn134] end connection 127.0.0.1:57107 (33 connections now open)
+2018-05-24T17:59:40.578+0300 I NETWORK  [conn105] end connection 127.0.0.1:57078 (9 connections now open)
+2018-05-24T17:59:40.574+0300 I NETWORK  [conn107] end connection 127.0.0.1:57080 (50 connections now open)
+2018-05-24T17:59:40.578+0300 I NETWORK  [conn83] end connection 127.0.0.1:57056 (8 connections now open)
+2018-05-24T17:59:40.578+0300 I NETWORK  [conn92] end connection 127.0.0.1:57065 (7 connections now open)
+2018-05-24T17:59:40.578+0300 I NETWORK  [conn86] end connection 127.0.0.1:57059 (5 connections now open)
+2018-05-24T17:59:40.577+0300 I NETWORK  [conn94] end connection 127.0.0.1:57067 (26 connections now open)
+2018-05-24T17:59:40.578+0300 I NETWORK  [conn80] end connection 127.0.0.1:57053 (4 connections now open)
+2018-05-24T17:59:40.578+0300 I NETWORK  [conn82] end connection 127.0.0.1:57055 (3 connections now open)
+2018-05-24T17:59:40.577+0300 I NETWORK  [conn93] end connection 127.0.0.1:57066 (24 connections now open)
+2018-05-24T17:59:40.575+0300 I NETWORK  [conn140] end connection 127.0.0.1:57113 (45 connections now open)
+2018-05-24T17:59:40.578+0300 I NETWORK  [conn125] end connection 127.0.0.1:57098 (1 connection now open)
+2018-05-24T17:59:40.578+0300 I NETWORK  [conn158] end connection 127.0.0.1:57131 (0 connections now open)
+2018-05-24T17:59:40.577+0300 I NETWORK  [conn91] end connection 127.0.0.1:57064 (22 connections now open)
+2018-05-24T17:59:40.577+0300 I NETWORK  [conn128] end connection 127.0.0.1:57101 (21 connections now open)
+2018-05-24T17:59:40.577+0300 I NETWORK  [conn127] end connection 127.0.0.1:57100 (19 connections now open)
+2018-05-24T17:59:40.577+0300 I NETWORK  [conn89] end connection 127.0.0.1:57062 (18 connections now open)
+2018-05-24T18:00:39.078+0300 I NETWORK  [listener] connection accepted from 127.0.0.1:57150 #159 (1 connection now open)
+2018-05-24T18:00:39.092+0300 I NETWORK  [conn159] received client metadata from 127.0.0.1:57150 conn159: { application: { name: "robo3t" }, driver: { name: "MongoDB Internal Client", version: "3.4.3-10-g865d2fb" }, os: { type: "Windows", name: "Microsoft Windows 8", architecture: "x86_64", version: "6.2 (build 9200)" } }
+2018-05-24T18:00:39.134+0300 I NETWORK  [listener] connection accepted from 127.0.0.1:57151 #160 (2 connections now open)
+2018-05-24T18:00:39.138+0300 I NETWORK  [conn160] received client metadata from 127.0.0.1:57151 conn160: { application: { name: "MongoDB Shell" }, driver: { name: "MongoDB Internal Client", version: "3.4.3-10-g865d2fb" }, os: { type: "Windows", name: "Microsoft Windows 8", architecture: "x86_64", version: "6.2 (build 9200)" } }
+2018-05-24T18:00:45.064+0300 I NETWORK  [listener] connection accepted from 127.0.0.1:57152 #161 (3 connections now open)
+2018-05-24T18:00:45.067+0300 I NETWORK  [conn161] received client metadata from 127.0.0.1:57152 conn161: { application: { name: "robo3t" }, driver: { name: "MongoDB Internal Client", version: "3.4.3-10-g865d2fb" }, os: { type: "Windows", name: "Microsoft Windows 8", architecture: "x86_64", version: "6.2 (build 9200)" } }
+2018-05-24T18:00:45.107+0300 I NETWORK  [listener] connection accepted from 127.0.0.1:57153 #162 (4 connections now open)
+2018-05-24T18:00:45.110+0300 I NETWORK  [conn162] received client metadata from 127.0.0.1:57153 conn162: { application: { name: "MongoDB Shell" }, driver: { name: "MongoDB Internal Client", version: "3.4.3-10-g865d2fb" }, os: { type: "Windows", name: "Microsoft Windows 8", architecture: "x86_64", version: "6.2 (build 9200)" } }
+2018-05-24T18:00:48.089+0300 I NETWORK  [listener] connection accepted from 127.0.0.1:57154 #163 (5 connections now open)
+2018-05-24T18:00:48.094+0300 I NETWORK  [conn163] received client metadata from 127.0.0.1:57154 conn163: { application: { name: "robo3t" }, driver: { name: "MongoDB Internal Client", version: "3.4.3-10-g865d2fb" }, os: { type: "Windows", name: "Microsoft Windows 8", architecture: "x86_64", version: "6.2 (build 9200)" } }
+2018-05-24T18:00:48.137+0300 I NETWORK  [listener] connection accepted from 127.0.0.1:57155 #164 (6 connections now open)
+2018-05-24T18:00:48.142+0300 I NETWORK  [conn164] received client metadata from 127.0.0.1:57155 conn164: { application: { name: "MongoDB Shell" }, driver: { name: "MongoDB Internal Client", version: "3.4.3-10-g865d2fb" }, os: { type: "Windows", name: "Microsoft Windows 8", architecture: "x86_64", version: "6.2 (build 9200)" } }
+2018-05-24T18:00:54.593+0300 I NETWORK  [conn163] end connection 127.0.0.1:57154 (5 connections now open)
+2018-05-24T18:00:54.594+0300 I NETWORK  [conn164] end connection 127.0.0.1:57155 (4 connections now open)
+2018-05-24T18:00:55.369+0300 I NETWORK  [conn161] end connection 127.0.0.1:57152 (3 connections now open)
+2018-05-24T18:00:55.370+0300 I NETWORK  [conn162] end connection 127.0.0.1:57153 (2 connections now open)
+2018-05-24T18:00:56.847+0300 I NETWORK  [conn159] end connection 127.0.0.1:57150 (1 connection now open)
+2018-05-24T18:00:56.847+0300 I NETWORK  [conn160] end connection 127.0.0.1:57151 (0 connections now open)
+2018-05-24T18:01:03.110+0300 I CONTROL  [thread165] CTRL_CLOSE_EVENT signal
+2018-05-24T18:01:03.110+0300 I CONTROL  [consoleTerminate] got CTRL_CLOSE_EVENT, will terminate after current cmd ends
+2018-05-24T18:01:03.110+0300 I NETWORK  [consoleTerminate] shutdown: going to close listening sockets...
+2018-05-24T18:01:03.111+0300 I FTDC     [consoleTerminate] Shutting down full-time diagnostic data capture
+2018-05-24T18:01:03.114+0300 I STORAGE  [consoleTerminate] WiredTigerKVEngine shutting down
+2018-05-24T18:01:03.609+0300 I STORAGE  [consoleTerminate] shutdown: removing fs lock...
+2018-05-24T18:01:03.609+0300 I CONTROL  [consoleTerminate] now exiting
+2018-05-24T18:01:03.609+0300 I CONTROL  [consoleTerminate] shutting down with code:12

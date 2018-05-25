@@ -70,11 +70,8 @@ class SN_OneCollection(SocialNetwork):
         self._WriteConcern = { "w": 1, "j": True, "wtimeout": 10000 }
     
     def sort_favorites(self, count = 1000):
-        SN_OneCollection.favorites_id = []
-
-        for doc in self.db.posts.find({}, {"_id": 1}).sort("score", DESCENDING).limit(count):
-            SN_OneCollection.favorites_id.append(doc)
-
+        SN_OneCollection.favorites_id = list(self.db.posts.aggregate([ { '$sample': { 'size': count } }, {'$project':{'_id':1}} ]))
+        
     def prepare(self):    
         self.sort_favorites()
         # index creation to go here    
