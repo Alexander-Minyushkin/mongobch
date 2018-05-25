@@ -71,7 +71,7 @@ class SN_OneCollection(SocialNetwork):
     
     def sort_favorites(self, count = 1000):
         SN_OneCollection.favorites_id = list(self.db.posts.aggregate([ { '$sample': { 'size': count } }, {'$project':{'_id':1}} ]))
-        
+
     def prepare(self):    
         self.sort_favorites()
         # index creation to go here    
@@ -151,7 +151,7 @@ class SN_OneCollection(SocialNetwork):
             "content": randomText(),
             "score": 1, # this need to be constant for self._inflate_to() to work properly
             "comments": [],
-            } for _ in range(min(100, num))]) ## Insert up to 100 initial posts
+            } for _ in range(min(10, num))]) ## Insert up to 10 initial posts
 
         ## Inflate exponentially until required number of posts
         while(self.db.command("collstats", "posts")['count'] < num):            
