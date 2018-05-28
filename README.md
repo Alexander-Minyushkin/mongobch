@@ -6,7 +6,20 @@ Simulate implementation of database for social network which allow client to wri
 Goal is to measure MongoDB performance on different Cloud providers.
 
 ## Start
-Clone or download sources.
+
+```
+# Setup for Amazon Linux AMI 2018.03.0 (HVM)
+
+sudo yum update -y
+sudo yum install git -y
+sudo yum install python36 -y
+
+git clone https://github.com/Alexander-Minyushkin/mongobch.git
+cd mongobch/
+sudo python3 -m pip install -r requirements.txt
+```
+
+On any system you need to clone or download sources, install python3.6.
 Run `mongobch.py` with options:
 
 ```
@@ -41,18 +54,14 @@ Output will look like this:
 ```
 Benchmark started.
 Connection established
-Initial posts added. 362.41374373435974
-{'db': 'test_perf', 'collections': 1, 'views': 0, 'objects': 1000000, 'avgObjSize': 1086.0, 'dataSize': 1086000000.0, 'storageSize': 1073594368.0, 'numExtents': 0, 'indexes': 1, 'indexSize': 9617408.0, 'fsUsedSize': 168740970496.0, 'fsTotalSize': 494586032128.0, 'ok': 1.0}
-2018-05-16 11:50:10.110057, 0.0, started, Thread-0, windows-1000000-5
-2018-05-16 11:50:10.127570, 0.0, started, Thread-1, windows-1000000-5
-2018-05-16 11:50:10.130070, 0.0, started, Thread-2, windows-1000000-5
-2018-05-16 11:50:10.135573, 0.0, started, Thread-3, windows-1000000-5
-2018-05-16 11:50:10.138575, 0.0, started, Thread-4, windows-1000000-5
-2018-05-16 11:50:10.125067, 0.07699275016784668, read, Thread-0, windows-1000000-5
+Adding initial posts 
+Initial posts added, 170.52163410186768
+{'db': 'test_perf', 'collections': 1, 'views': 0, 'objects': 400000, 'avgObjSize': 1086.0, 'dataSize': 434400000, 'storageSize': 63455232, 'numExtents': 0, 'indexes': 1, 'indexSize': 3764224, 'fileSize': 0, 'nsSizeMB': 0, 'ok': 1}
+2018-05-25 11:49:28.213340, 0.0, started, Thread-0, aws-400000-5
 
-2018-05-16 11:50:10.212565, 0.0010006427764892578, read, Thread-0, windows-1000000-5
+2018-05-25 11:49:28.224761, 0.0, started, Thread-1, aws-400000-5
 
-2018-05-16 11:50:10.224073, 0.0010001659393310547, upvote, Thread-0, windows-1000000-5
+2018-05-25 11:49:28.237346, 0.0, started, Thread-2, aws-400000-5
 ```
 
 ## Reports
