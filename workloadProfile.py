@@ -5,6 +5,7 @@ from socialNetwork import SN_OneCollection, SocialNetwork, randomText
 import threading
 import time
 from datetime import datetime
+import bson
 
 from random import sample
 import unittest
@@ -66,35 +67,42 @@ class UserWorkload(threading.Thread):
     def run(self):
 
         timestamp = str(datetime.now())
-        print(f'{timestamp}, 0.0, started, {self.getName()}, {self.label}\n')
+        print(f'{timestamp}, 0.0, started, 0, {self.getName()}, {self.label}\n')
         
         thread_start = time.time()
         for action in self.clicks_order:
             
             rt = randomText()
             timestamp = str(datetime.now())
-            start = time.time()
+            info = 0
+            elapsed = 0
+
+            start = time.time()            
             if action == "read" : 
-                self.sn.read()
+                doc = self.sn.read()
+                elapsed = time.time() - start
+                if doc is not None:
+                    info = len(bson.BSON.encode(doc))                    
             elif action == "upvote" : 
                 start = time.time()
                 self.sn.upvote()
+                elapsed = time.time() - start
             elif action == "comment" : 
                 start = time.time()
                 self.sn.comment(text = rt)
+                elapsed = time.time() - start
             elif action == "post" : 
                 start = time.time()
                 self.sn.post(text = rt)  
+                elapsed = time.time() - start                    
 
-            elapsed = time.time() - start        
-
-            print(f'{timestamp}, {elapsed}, {action}, {self.getName()}, {self.label}\n') ## \n added at the end to ensure thread-safe prints
+            print(f'{timestamp}, {elapsed}, {action}, {info}, {self.getName()}, {self.label}\n') ## \n added at the end to ensure thread-safe prints
 
             time.sleep(self.user_think_time_sec)
         
         timestamp = str(datetime.now())
         elapsed = time.time() - thread_start
-        print(f'{timestamp}, {elapsed}, finished, {self.getName()}, {self.label}\n')           
+        print(f'{timestamp}, {elapsed}, finished, 0, {self.getName()}, {self.label}\n')           
 
 class Test_UserWorkload(unittest.TestCase): 
 
