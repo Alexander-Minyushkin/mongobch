@@ -38,6 +38,7 @@ Options:
   --wc_w INTEGER              Write concern "w" Option.
   --wc_j TEXT                 Write concern "j" Option.
   --wc_to INTEGER             Write concern "wtimeout" value.
+  --repeat INTEGER            How many times to repeat scenarios.  
   --label TEXT                Any text to distinguish test runs.
   --help                      Show this message and exit.
 
@@ -45,10 +46,11 @@ Options:
 
 For example:
 ```
-python mongobch.py --connection mongodb://localhost:27017/ --threads 5 --utt 0.01 --initial_post_num 1000000 --label windows-1000000-5
+python mongobch.py --connection mongodb://localhost:27017/ --threads 5 --utt 0.01 --initial_post_num 1000000 --label windows-1000000-5----
 ```
 This command will connect to locally started MongoDB, create 1 million posts at the beginnning, start 5 threads with interval 0.01 sec. between calls.
-At the end of the log string label `windows-1000000-5` will be printed.
+At the end of the log string label `windows-1000000-5----` will be printed. It is easier to split later using '-' as separator. 
+Later, when you add new conditions to benchmark, you can add this information in the label `windows-1000000-5-NewCondition---` and your previosly written parsers will continue to work.
 
 Output will look like this:
 ```
@@ -67,5 +69,5 @@ Initial posts added, 170.52163410186768
 ## Reports
 Once you get logs from benchmark you can generate nice reports using R. Take a look at folder `/report`
 
-Plot example, shows that response time depends on number of documents (posts_num) in collection
+Plot example, shows that response time depends on number of threads (Windows, local)
 ![Response time](/report/resp_time.png)

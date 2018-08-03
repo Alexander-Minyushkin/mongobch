@@ -1,7 +1,7 @@
 ---
 title: "MongoDB Windows local"
 author: "Alexander Minyushkin"
-date: '2018.07.16'
+date: '2018.05.16'
 output: html_document
 ---
 
@@ -25,9 +25,9 @@ options(stringsAsFactors = FALSE)
 
 
 ```{r read_log}
-raw <- fread('grep Thread ..\\logs\\win_local_bench_400K.log', 
+raw <- fread('grep Thread ..\\logs\\win_local_bench.log', 
              sep=",", 
-             col.names=c("time", "response_time", "case", "info", "thread", "label"))
+             col.names=c("time", "response_time", "case", "thread", "label"))
 
 
 tidy <- data.table(raw, do.call(rbind, strsplit(raw$label,"-")))
@@ -66,19 +66,9 @@ tidy$time <- as.POSIXct(tidy$time, tz="", format="%Y-%m-%d %H:%M:%OS")
              group=case, 
              colour=case)) + ylim(0,NA)+ scale_color_brewer(palette="Set1") + facet_grid( . ~ case ) + 
     geom_line() + geom_point()+ ggtitle(paste0("Response times, percentile 90%")) 
- 
-ggsave("resp_time.png")
- 
- ggplot(data = tidy[case == "read"][,list(response_time_90pct = quantile(response_time, 0.9)), 
-                                    by="info,thread_num"][,list(bytes=info, response_time_90pct, thread_num),], 
-         aes(x=bytes, 
-             y=response_time_90pct,
-             group=as.factor(thread_num),
-             color=as.factor(thread_num))) + ylim(0,NA) + xlim(0,NA)+
-   scale_color_brewer(palette="Set1") +  
-   geom_line() + geom_point()+ ggtitle(paste0("Read Response times, percentile 90% vs size of post, bytes"))  
 
-ggsave("resp_time_read.png")
+
+ggsave("resp_time.png")
 
 ```
 

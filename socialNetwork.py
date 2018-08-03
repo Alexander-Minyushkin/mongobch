@@ -10,6 +10,7 @@ from random import sample, choices, randint
 from math import sqrt, ceil
 import string
 import unittest
+import itertools
 
 def randomText(n=1024):
     return "".join(choices(string.ascii_lowercase +"      ", k=n))
@@ -64,6 +65,8 @@ class SN_OneCollection(SocialNetwork):
     """
 
     favorites_id = []  ## This is list of most popular posts which will be read, commented and upvoted further
+    favorites_id_update_cycle = itertools.cycle([])
+    favorites_id_read_cycle = itertools.cycle([])
 
     def __init__(self, connection_string, db_name):
         self.db = MongoClient(connection_string)[db_name]
@@ -71,6 +74,8 @@ class SN_OneCollection(SocialNetwork):
     
     def sort_favorites(self, count = 1000):
         SN_OneCollection.favorites_id = list(self.db.posts.aggregate([ { '$sample': { 'size': count } }, {'$project':{'_id':1}} ]))
+        SN_OneCollection.favorites_id_update_cycle = itertools.cycle(SN_OneCollection.favorites_id)
+        SN_OneCollection.favorites_id_read_cycle = itertools.cycle(SN_OneCollection.favorites_id)
 
     def prepare(self):    
         self.sort_favorites()
@@ -88,9 +93,13 @@ class SN_OneCollection(SocialNetwork):
         if len(SN_OneCollection.favorites_id) == 0 :
             self.sort_favorites()
 
-        id = sample(SN_OneCollection.favorites_id, 1)[0]
-        
-        return id
+        return next(SN_OneCollection.favorites_id_update_cycle)      
+
+    def get_doc_id_for_read(self):
+        if len(SN_OneCollection.favorites_id) == 0 :
+            self.sort_favorites()
+
+        return next(SN_OneCollection.favorites_id_read_cycle)        
 
 
     def post(self, score = 0, text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."):
@@ -173,7 +182,7 @@ class SN_OneCollection(SocialNetwork):
         #raise NotImplementedError
 
     def read(self):
-        doc_id = self.get_doc_id_for_update()        
+        doc_id = self.get_doc_id_for_read()        
         
         return self.db.posts.find_one(doc_id)
 

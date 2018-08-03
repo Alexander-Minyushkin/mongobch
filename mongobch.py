@@ -20,8 +20,9 @@ from random import randint
 @click.option('--wc_w', default=1, help='Write concern "w" Option.')
 @click.option('--wc_j', default=True, help='Write concern "j" Option.')
 @click.option('--wc_to', default=10000, help='Write concern "wtimeout" value.')
+@click.option('--repeat', default=1, help='How many times to repeat scenarios.')
 @click.option('--label', default="default-label", help='Any text to distinguish test runs.')
-def run_perf_test(threads, utt, connection, db_name, initial_post_num, ramp_up_sec, wc_w, wc_j, wc_to, label):
+def run_perf_test(threads, utt, connection, db_name, initial_post_num, ramp_up_sec, wc_w, wc_j, wc_to, repeat, label):
     """
     """
 
@@ -49,7 +50,7 @@ def run_perf_test(threads, utt, connection, db_name, initial_post_num, ramp_up_s
         sn_ = SN_OneCollection(connection, db_name)
         sn.WriteConcern = { "w": wc_w, "j": wc_j, "wtimeout": wc_to }
 
-        arr_threads.append(UserWorkload(name = f"Thread-{i}", sn = sn_, user_think_time_sec=utt, label = label))
+        arr_threads.append(UserWorkload(name = f"Thread-{i}", sn = sn_, user_think_time_sec=utt, label = label, repeat = repeat))
         arr_threads[-1].start()
         if threads > 1:
             time.sleep(ramp_up_sec/(threads - 1))
